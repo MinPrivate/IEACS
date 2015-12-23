@@ -1,0 +1,14 @@
+bin\Debug\南蛮入侵.exe
+bin\Debug\南蛮入侵.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\南蛮入侵.FormUI.resources
+obj\Debug\南蛮入侵.Properties.Resources.resources
+obj\Debug\南蛮入侵.csproj.GenerateResource.Cache
+obj\Debug\南蛮入侵.exe
+obj\Debug\南蛮入侵.pdb
+obj\Debug\南蛮入侵.FormLogin.resources
+obj\Debug\南蛮入侵.FormInvalid.resources
+obj\Debug\南蛮入侵.FormLoginFail.resources
+obj\Debug\南蛮入侵.FormLogout.resources
+obj\Debug\南蛮入侵.FormSuccess.resources
+obj\Debug\南蛮入侵.FormWrongInput.resources

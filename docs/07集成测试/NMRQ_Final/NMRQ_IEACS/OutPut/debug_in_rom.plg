@@ -1,0 +1,394 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+C:\Documents and Settings\Administrator\桌面\NMRQ_88\NMRQ_IEACS\NMRQ_IEACS.uvproj
+Project File Date:  08/07/2013
+
+<h2>Output:</h2>
+Build target 'NMRQ_IEACS'
+assembling Startup.s...
+Startup.s(128): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+Startup.s:   128 00000088         MOV     PC, R0
+Startup.s(161): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+Startup.s:   161 0000009c     MOV   pc,lr    
+Startup.s: 0 Errors, 2 Warnings
+assembling Os_cpu_a.s...
+compiling Os_cpu_c.c...
+ARM\Os_cpu_c.c(97): warning:  #1267-D: Implicit physical register R0 should be defined as a variable
+ARM\Os_cpu_c.c:                   MRS     R0, SPSR
+ARM\Os_cpu_c.c:                           ^
+ARM\Os_cpu_c.c: ARM\Os_cpu_c.c: 1 warning, 0 errors
+compiling OS_CORE.C...
+compiling OS_TASK.C...
+compiling OS_TIME.C...
+compiling helper.c...
+compiling main.c...
+compiling NMRQ_key.c...
+compiling NMRQ_eac.c...
+Source\NMRQ_eac.c(384): warning:  #550-D: variable "tempMsg" was set but never used
+Source\NMRQ_eac.c:                       INT8U tempMsg;
+Source\NMRQ_eac.c:                             ^
+Source\NMRQ_eac.c: Source\NMRQ_eac.c: 1 warning, 0 errors
+compiling NMRQ_hi.c...
+compiling NMRQ_task.c...
+Source\NMRQ_task.c(58): warning:  #1295-D: Deprecated declaration LCD_DisplayMainScreen - give arg types
+Source\NMRQ_task.c:   extern INT8U LCD_DisplayMainScreen();
+Source\NMRQ_task.c:                ^
+Source\NMRQ_task.c(64): warning:  #1295-D: Deprecated declaration LCD_DisplayMenuSet - give arg types
+Source\NMRQ_task.c:   extern INT8U LCD_DisplayMenuSet();
+Source\NMRQ_task.c:                ^
+Source\NMRQ_task.c(67): warning:  #1295-D: Deprecated declaration LCD_DisplayModeSelect - give arg types
+Source\NMRQ_task.c:   extern INT8U LCD_DisplayModeSelect();
+Source\NMRQ_task.c:                ^
+Source\NMRQ_task.c(143): warning:  #223-D: function "BeepCount" declared implicitly
+Source\NMRQ_task.c:      BeepCount(1);                          
+Source\NMRQ_task.c:      ^
+Source\NMRQ_task.c(236): warning:  #550-D: variable "uiTempOpeState" was set but never used
+Source\NMRQ_task.c:     INT8U uiTempOpeState;                                                                   /*      记录操作执行情况        */
+Source\NMRQ_task.c:           ^
+Source\NMRQ_task.c(1489): warning:  #223-D: function "DelayNS" declared implicitly
+Source\NMRQ_task.c:             DelayNS(15);
+Source\NMRQ_task.c:             ^
+Source\NMRQ_task.c: Source\NMRQ_task.c: 6 warnings, 0 errors
+compiling Target.c...
+Target\Target.c(127): warning:  #69-D: integer conversion resulted in truncation
+Target\Target.c:       T0IR = 0xffffffff;
+Target\Target.c:              ^
+Target\Target.c(321): warning:  #69-D: integer conversion resulted in truncation
+Target\Target.c:       T0IR = 0xffffffff;
+Target\Target.c:              ^
+Target\Target.c: Target\Target.c: 2 warnings, 0 errors
+assembling IRQ.s...
+compiling NMRQ_lcd240160.c...
+Driver\NMRQ_lcd240160.c(1047): warning:  #940-D: missing return statement at end of non-void function "LCD_SelectMenuSetItem"
+Driver\NMRQ_lcd240160.c:   }
+Driver\NMRQ_lcd240160.c:   ^
+Driver\NMRQ_lcd240160.c: Driver\NMRQ_lcd240160.c: 1 warning, 0 errors
+linking...
+.\OutPut\debug_in_rom.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
+Program Size: Code=27652 RO-data=4800 RW-data=96 ZI-data=7112  
+.\OutPut\debug_in_rom.axf: Finished: 0 information, 1 warning and 0 error messages.
+FromELF: creating hex file...
+".\OutPut\debug_in_rom.axf" - 0 Error(s), 14 Warning(s).
+Build target 'NMRQ_IEACS'
+compiling main.c...
+Source\main.c(214): error:  #20: identifier "i" is undefined
+Source\main.c:             if(i == 0){
+Source\main.c:                ^
+Source\main.c: Source\main.c: 0 warnings, 1 error
+compiling NMRQ_key.c...
+compiling NMRQ_eac.c...
+Source\NMRQ_eac.c(389): warning:  #550-D: variable "tempMsg" was set but never used
+Source\NMRQ_eac.c:                       INT8U tempMsg;
+Source\NMRQ_eac.c:                             ^
+Source\NMRQ_eac.c: Source\NMRQ_eac.c: 1 warning, 0 errors
+compiling NMRQ_hi.c...
+compiling NMRQ_com.c...
+compiling NMRQ_task.c...
+Source\NMRQ_task.c(58): warning:  #1295-D: Deprecated declaration LCD_DisplayMainScreen - give arg types
+Source\NMRQ_task.c:   extern INT8U LCD_DisplayMainScreen();
+Source\NMRQ_task.c:                ^
+Source\NMRQ_task.c(64): warning:  #1295-D: Deprecated declaration LCD_DisplayMenuSet - give arg types
+Source\NMRQ_task.c:   extern INT8U LCD_DisplayMenuSet();
+Source\NMRQ_task.c:                ^
+Source\NMRQ_task.c(67): warning:  #1295-D: Deprecated declaration LCD_DisplayModeSelect - give arg types
+Source\NMRQ_task.c:   extern INT8U LCD_DisplayModeSelect();
+Source\NMRQ_task.c:                ^
+Source\NMRQ_task.c(143): warning:  #223-D: function "BeepCount" declared implicitly
+Source\NMRQ_task.c:      BeepCount(1);                          
+Source\NMRQ_task.c:      ^
+Source\NMRQ_task.c(236): warning:  #550-D: variable "uiTempOpeState" was set but never used
+Source\NMRQ_task.c:     INT8U uiTempOpeState;                                                                   /*      记录操作执行情况        */
+Source\NMRQ_task.c:           ^
+Source\NMRQ_task.c(1489): warning:  #223-D: function "DelayNS" declared implicitly
+Source\NMRQ_task.c:             DelayNS(15);
+Source\NMRQ_task.c:             ^
+Source\NMRQ_task.c: Source\NMRQ_task.c: 6 warnings, 0 errors
+compiling NMRQ_lcd240160.c...
+Driver\NMRQ_lcd240160.c(1047): warning:  #940-D: missing return statement at end of non-void function "LCD_SelectMenuSetItem"
+Driver\NMRQ_lcd240160.c:   }
+Driver\NMRQ_lcd240160.c:   ^
+Driver\NMRQ_lcd240160.c: Driver\NMRQ_lcd240160.c: 1 warning, 0 errors
+Target not created
+Build target 'NMRQ_IEACS'
+compiling main.c...
+linking...
+.\OutPut\debug_in_rom.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
+Program Size: Code=27352 RO-data=4800 RW-data=96 ZI-data=7112  
+.\OutPut\debug_in_rom.axf: Finished: 0 information, 1 warning and 0 error messages.
+FromELF: creating hex file...
+".\OutPut\debug_in_rom.axf" - 0 Error(s), 1 Warning(s).
+Build target 'NMRQ_IEACS'
+compiling Os_cpu_c.c...
+ARM\Os_cpu_c.c(93): warning:  #1267-D: Implicit physical register R0 should be defined as a variable
+ARM\Os_cpu_c.c:                   MRS     R0, SPSR
+ARM\Os_cpu_c.c:                           ^
+ARM\Os_cpu_c.c: ARM\Os_cpu_c.c: 1 warning, 0 errors
+compiling NMRQ_task.c...
+Source\NMRQ_task.c(31): warning:  #1295-D: Deprecated declaration LCD_DisplayMainScreen - give arg types
+Source\NMRQ_task.c:   extern INT8U LCD_DisplayMainScreen();
+Source\NMRQ_task.c:                ^
+Source\NMRQ_task.c(37): warning:  #1295-D: Deprecated declaration LCD_DisplayMenuSet - give arg types
+Source\NMRQ_task.c:   extern INT8U LCD_DisplayMenuSet();
+Source\NMRQ_task.c:                ^
+Source\NMRQ_task.c(40): warning:  #1295-D: Deprecated declaration LCD_DisplayModeSelect - give arg types
+Source\NMRQ_task.c:   extern INT8U LCD_DisplayModeSelect();
+Source\NMRQ_task.c:                ^
+Source\NMRQ_task.c(116): warning:  #223-D: function "BeepCount" declared implicitly
+Source\NMRQ_task.c:      BeepCount(1);                          
+Source\NMRQ_task.c:      ^
+Source\NMRQ_task.c(209): warning:  #550-D: variable "uiTempOpeState" was set but never used
+Source\NMRQ_task.c:     INT8U uiTempOpeState;                                                                   /*      记录操作执行情况        */
+Source\NMRQ_task.c:           ^
+Source\NMRQ_task.c(1462): warning:  #223-D: function "DelayNS" declared implicitly
+Source\NMRQ_task.c:             DelayNS(15);
+Source\NMRQ_task.c:             ^
+Source\NMRQ_task.c: Source\NMRQ_task.c: 6 warnings, 0 errors
+compiling Target.c...
+Target\Target.c(88): warning:  #69-D: integer conversion resulted in truncation
+Target\Target.c:       T0IR = 0xffffffff;
+Target\Target.c:              ^
+Target\Target.c(262): warning:  #69-D: integer conversion resulted in truncation
+Target\Target.c:       T0IR = 0xffffffff;
+Target\Target.c:              ^
+Target\Target.c: Target\Target.c: 2 warnings, 0 errors
+linking...
+.\OutPut\debug_in_rom.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
+Program Size: Code=27352 RO-data=4800 RW-data=96 ZI-data=7112  
+.\OutPut\debug_in_rom.axf: Finished: 0 information, 1 warning and 0 error messages.
+FromELF: creating hex file...
+".\OutPut\debug_in_rom.axf" - 0 Error(s), 10 Warning(s).
+Build target 'NMRQ_IEACS'
+assembling IRQ.s...
+compiling NMRQ_lcd240160.c...
+Driver\NMRQ_lcd240160.c(1055): warning:  #940-D: missing return statement at end of non-void function "LCD_SelectMenuSetItem"
+Driver\NMRQ_lcd240160.c:   }
+Driver\NMRQ_lcd240160.c:   ^
+Driver\NMRQ_lcd240160.c: Driver\NMRQ_lcd240160.c: 1 warning, 0 errors
+linking...
+.\OutPut\debug_in_rom.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
+Program Size: Code=27352 RO-data=4800 RW-data=96 ZI-data=7112  
+.\OutPut\debug_in_rom.axf: Finished: 0 information, 1 warning and 0 error messages.
+FromELF: creating hex file...
+".\OutPut\debug_in_rom.axf" - 0 Error(s), 2 Warning(s).
+Build target 'NMRQ_IEACS'
+assembling Startup.s...
+Startup.s(128): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+Startup.s:   128 00000088         MOV     PC, R0
+Startup.s(161): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+Startup.s:   161 0000009c     MOV   pc,lr    
+Startup.s: 0 Errors, 2 Warnings
+assembling Os_cpu_a.s...
+compiling Os_cpu_c.c...
+ARM\Os_cpu_c.c(93): warning:  #1267-D: Implicit physical register R0 should be defined as a variable
+ARM\Os_cpu_c.c:                   MRS     R0, SPSR
+ARM\Os_cpu_c.c:                           ^
+ARM\Os_cpu_c.c: ARM\Os_cpu_c.c: 1 warning, 0 errors
+compiling OS_CORE.C...
+compiling OS_TASK.C...
+compiling OS_TIME.C...
+compiling helper.c...
+compiling main.c...
+compiling NMRQ_key.c...
+compiling NMRQ_eac.c...
+Source\NMRQ_eac.c(389): warning:  #550-D: variable "tempMsg" was set but never used
+Source\NMRQ_eac.c:                       INT8U tempMsg;
+Source\NMRQ_eac.c:                             ^
+Source\NMRQ_eac.c: Source\NMRQ_eac.c: 1 warning, 0 errors
+compiling NMRQ_hi.c...
+compiling NMRQ_com.c...
+compiling NMRQ_task.c...
+Source\NMRQ_task.c(31): warning:  #1295-D: Deprecated declaration LCD_DisplayMainScreen - give arg types
+Source\NMRQ_task.c:   extern INT8U LCD_DisplayMainScreen();
+Source\NMRQ_task.c:                ^
+Source\NMRQ_task.c(37): warning:  #1295-D: Deprecated declaration LCD_DisplayMenuSet - give arg types
+Source\NMRQ_task.c:   extern INT8U LCD_DisplayMenuSet();
+Source\NMRQ_task.c:                ^
+Source\NMRQ_task.c(40): warning:  #1295-D: Deprecated declaration LCD_DisplayModeSelect - give arg types
+Source\NMRQ_task.c:   extern INT8U LCD_DisplayModeSelect();
+Source\NMRQ_task.c:                ^
+Source\NMRQ_task.c(116): warning:  #223-D: function "BeepCount" declared implicitly
+Source\NMRQ_task.c:      BeepCount(1);                          
+Source\NMRQ_task.c:      ^
+Source\NMRQ_task.c(209): warning:  #550-D: variable "uiTempOpeState" was set but never used
+Source\NMRQ_task.c:     INT8U uiTempOpeState;                                                                   /*      记录操作执行情况        */
+Source\NMRQ_task.c:           ^
+Source\NMRQ_task.c(1462): warning:  #223-D: function "DelayNS" declared implicitly
+Source\NMRQ_task.c:             DelayNS(15);
+Source\NMRQ_task.c:             ^
+Source\NMRQ_task.c: Source\NMRQ_task.c: 6 warnings, 0 errors
+compiling Target.c...
+Target\Target.c(88): warning:  #69-D: integer conversion resulted in truncation
+Target\Target.c:       T0IR = 0xffffffff;
+Target\Target.c:              ^
+Target\Target.c(262): warning:  #69-D: integer conversion resulted in truncation
+Target\Target.c:       T0IR = 0xffffffff;
+Target\Target.c:              ^
+Target\Target.c: Target\Target.c: 2 warnings, 0 errors
+assembling IRQ.s...
+compiling NMRQ_lcd240160.c...
+Driver\NMRQ_lcd240160.c(1055): warning:  #940-D: missing return statement at end of non-void function "LCD_SelectMenuSetItem"
+Driver\NMRQ_lcd240160.c:   }
+Driver\NMRQ_lcd240160.c:   ^
+Driver\NMRQ_lcd240160.c: Driver\NMRQ_lcd240160.c: 1 warning, 0 errors
+linking...
+.\OutPut\debug_in_rom.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
+Program Size: Code=26880 RO-data=4800 RW-data=96 ZI-data=6600  
+.\OutPut\debug_in_rom.axf: Finished: 0 information, 1 warning and 0 error messages.
+FromELF: creating hex file...
+".\OutPut\debug_in_rom.axf" - 0 Error(s), 14 Warning(s).
+Build target 'NMRQ_IEACS'
+linking...
+.\OutPut\debug_in_rom.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
+Program Size: Code=26880 RO-data=4800 RW-data=96 ZI-data=6600  
+.\OutPut\debug_in_rom.axf: Finished: 0 information, 1 warning and 0 error messages.
+FromELF: creating hex file...
+".\OutPut\debug_in_rom.axf" - 0 Error(s), 1 Warning(s).
+Build target 'NMRQ_IEACS'
+compiling main.c...
+Source\main.c(46): warning:  #223-D: function "DelayNS" declared implicitly
+Source\main.c:                  DelayNS(10);
+Source\main.c:                  ^
+Source\main.c: Source\main.c: 1 warning, 0 errors
+linking...
+.\OutPut\debug_in_rom.axf: Error: L6218E: Undefined symbol DelayNS (referred from main.o).
+.\OutPut\debug_in_rom.axf: Not enough information to list image symbols.
+.\OutPut\debug_in_rom.axf: Finished: 1 information, 0 warning and 1 error messages.
+Target not created
+Build target 'NMRQ_IEACS'
+compiling main.c...
+linking...
+.\OutPut\debug_in_rom.axf: Error: L6218E: Undefined symbol BeepCount (referred from nmrq_task.o).
+.\OutPut\debug_in_rom.axf: Error: L6218E: Undefined symbol DelayNS (referred from nmrq_task.o).
+.\OutPut\debug_in_rom.axf: Not enough information to list image symbols.
+.\OutPut\debug_in_rom.axf: Finished: 1 information, 0 warning and 2 error messages.
+Target not created
+Build target 'NMRQ_IEACS'
+compiling main.c...
+linking...
+.\OutPut\debug_in_rom.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
+Program Size: Code=26880 RO-data=4800 RW-data=96 ZI-data=6600  
+.\OutPut\debug_in_rom.axf: Finished: 0 information, 1 warning and 0 error messages.
+FromELF: creating hex file...
+".\OutPut\debug_in_rom.axf" - 0 Error(s), 1 Warning(s).
+Build target 'NMRQ_IEACS'
+compiling main.c...
+compiling NMRQ_task.c...
+Source\NMRQ_task.c(31): warning:  #1295-D: Deprecated declaration LCD_DisplayMainScreen - give arg types
+Source\NMRQ_task.c:   extern INT8U LCD_DisplayMainScreen();
+Source\NMRQ_task.c:                ^
+Source\NMRQ_task.c(37): warning:  #1295-D: Deprecated declaration LCD_DisplayMenuSet - give arg types
+Source\NMRQ_task.c:   extern INT8U LCD_DisplayMenuSet();
+Source\NMRQ_task.c:                ^
+Source\NMRQ_task.c(40): warning:  #1295-D: Deprecated declaration LCD_DisplayModeSelect - give arg types
+Source\NMRQ_task.c:   extern INT8U LCD_DisplayModeSelect();
+Source\NMRQ_task.c:                ^
+Source\NMRQ_task.c(209): warning:  #550-D: variable "uiTempOpeState" was set but never used
+Source\NMRQ_task.c:     INT8U uiTempOpeState;                                                                   /*      记录操作执行情况        */
+Source\NMRQ_task.c:           ^
+Source\NMRQ_task.c: Source\NMRQ_task.c: 4 warnings, 0 errors
+linking...
+.\OutPut\debug_in_rom.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
+Program Size: Code=26880 RO-data=4800 RW-data=96 ZI-data=6600  
+.\OutPut\debug_in_rom.axf: Finished: 0 information, 1 warning and 0 error messages.
+FromELF: creating hex file...
+".\OutPut\debug_in_rom.axf" - 0 Error(s), 5 Warning(s).
+Build target 'NMRQ_IEACS'
+compiling main.c...
+linking...
+.\OutPut\debug_in_rom.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
+Program Size: Code=26880 RO-data=4800 RW-data=96 ZI-data=6600  
+.\OutPut\debug_in_rom.axf: Finished: 0 information, 1 warning and 0 error messages.
+FromELF: creating hex file...
+".\OutPut\debug_in_rom.axf" - 0 Error(s), 1 Warning(s).
+Build target 'NMRQ_IEACS'
+assembling Startup.s...
+Startup.s(128): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+Startup.s:   128 00000088         MOV     PC, R0
+Startup.s(161): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+Startup.s:   161 0000009c     MOV   pc,lr    
+Startup.s: 0 Errors, 2 Warnings
+assembling Os_cpu_a.s...
+compiling Os_cpu_c.c...
+ARM\Os_cpu_c.c(93): warning:  #1267-D: Implicit physical register R0 should be defined as a variable
+ARM\Os_cpu_c.c:                   MRS     R0, SPSR
+ARM\Os_cpu_c.c:                           ^
+ARM\Os_cpu_c.c: ARM\Os_cpu_c.c: 1 warning, 0 errors
+compiling OS_CORE.C...
+compiling OS_TASK.C...
+compiling OS_TIME.C...
+compiling helper.c...
+compiling main.c...
+compiling NMRQ_key.c...
+compiling NMRQ_eac.c...
+Source\NMRQ_eac.c(389): warning:  #550-D: variable "tempMsg" was set but never used
+Source\NMRQ_eac.c:                       INT8U tempMsg;
+Source\NMRQ_eac.c:                             ^
+Source\NMRQ_eac.c: Source\NMRQ_eac.c: 1 warning, 0 errors
+compiling NMRQ_hi.c...
+compiling NMRQ_com.c...
+compiling NMRQ_task.c...
+Source\NMRQ_task.c(31): warning:  #1295-D: Deprecated declaration LCD_DisplayMainScreen - give arg types
+Source\NMRQ_task.c:   extern INT8U LCD_DisplayMainScreen();
+Source\NMRQ_task.c:                ^
+Source\NMRQ_task.c(37): warning:  #1295-D: Deprecated declaration LCD_DisplayMenuSet - give arg types
+Source\NMRQ_task.c:   extern INT8U LCD_DisplayMenuSet();
+Source\NMRQ_task.c:                ^
+Source\NMRQ_task.c(40): warning:  #1295-D: Deprecated declaration LCD_DisplayModeSelect - give arg types
+Source\NMRQ_task.c:   extern INT8U LCD_DisplayModeSelect();
+Source\NMRQ_task.c:                ^
+Source\NMRQ_task.c(209): warning:  #550-D: variable "uiTempOpeState" was set but never used
+Source\NMRQ_task.c:     INT8U uiTempOpeState;                                                                   /*      记录操作执行情况        */
+Source\NMRQ_task.c:           ^
+Source\NMRQ_task.c: Source\NMRQ_task.c: 4 warnings, 0 errors
+compiling Target.c...
+Target\Target.c(88): warning:  #69-D: integer conversion resulted in truncation
+Target\Target.c:       T0IR = 0xffffffff;
+Target\Target.c:              ^
+Target\Target.c(262): warning:  #69-D: integer conversion resulted in truncation
+Target\Target.c:       T0IR = 0xffffffff;
+Target\Target.c:              ^
+Target\Target.c: Target\Target.c: 2 warnings, 0 errors
+assembling IRQ.s...
+compiling NMRQ_lcd240160.c...
+Driver\NMRQ_lcd240160.c(1055): warning:  #940-D: missing return statement at end of non-void function "LCD_SelectMenuSetItem"
+Driver\NMRQ_lcd240160.c:   }
+Driver\NMRQ_lcd240160.c:   ^
+Driver\NMRQ_lcd240160.c: Driver\NMRQ_lcd240160.c: 1 warning, 0 errors
+linking...
+.\OutPut\debug_in_rom.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
+Program Size: Code=26880 RO-data=4800 RW-data=96 ZI-data=6600  
+.\OutPut\debug_in_rom.axf: Finished: 0 information, 1 warning and 0 error messages.
+FromELF: creating hex file...
+".\OutPut\debug_in_rom.axf" - 0 Error(s), 12 Warning(s).
+Load "C:\\Documents and Settings\\Administrator\\桌面\\NMRQ_88\\NMRQ_IEACS\\OutPut\\debug_in_rom.AXF" 
+VTarget = 3.274V
+Info: TotalIRLen = 4, IRPrint = 0x01
+Info: TotalIRLen = 4, IRPrint = 0x01
+Info: RTCK reaction time is approx. 126ns
+Info: Auto JTAG speed: Adaptive
+Info: Core does not stop after Reset, setting WP to stop it.
+***JLink Warning: PC of target system has unexpected value of 0x00004260 after reset.
+DLL version V4.15n, compiled Jun 18 2010 19:55:09
+Firmware: J-Link ARM V8 compiled Sep  2 2011 17:54:36
+Hardware: V8.00
+Hardware-Breakpoints: 2
+Software-Breakpoints: 2048
+Watchpoints:          0
+Found 1 JTAG device, Total IRLen = 4:
+ Id of device #0: 0x4F1F0F0F
+ARM7 identified.
+Using adaptive clocking instead of fixed JTAG speed.
+Info: TotalIRLen = 4, IRPrint = 0x01
+Info: TotalIRLen = 4, IRPrint = 0x01
+Info: Resetting TRST
+Using adaptive clocking instead of fixed JTAG speed.
+Erase Done.
+Programming Done.
+Verify OK.
+Info: TotalIRLen = 4, IRPrint = 0x01
+Info: Resetting TRST
+Using adaptive clocking instead of fixed JTAG speed.
+Application running ...

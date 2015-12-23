@@ -1,0 +1,15 @@
+.\OutPut\uart.o: Driver\uart.c
+.\OutPut\uart.o: C:\Keil\ARM\INC\Philips\lpc2103.h
+.\OutPut\uart.o: Driver\..\Include\config.h
+.\OutPut\uart.o: Driver\..\Include\Includes.h
+.\OutPut\uart.o: Driver\..\Include\os_cpu.h
+.\OutPut\uart.o: Driver\..\Include\os_cfg.h
+.\OutPut\uart.o: Driver\..\Include\ucos_ii.h
+.\OutPut\uart.o: C:\Keil\ARM\RV31\INC\string.h
+.\OutPut\uart.o: Driver\..\Include\LCD240160.h
+.\OutPut\uart.o: C:\Keil\ARM\RV31\INC\stdio.h
+.\OutPut\uart.o: C:\Keil\ARM\RV31\INC\ctype.h
+.\OutPut\uart.o: C:\Keil\ARM\RV31\INC\stdlib.h
+.\OutPut\uart.o: C:\Keil\ARM\RV31\INC\setjmp.h
+.\OutPut\uart.o: C:\Keil\ARM\RV31\INC\rt_misc.h
+.\OutPut\uart.o: Driver\..\Include\target.h

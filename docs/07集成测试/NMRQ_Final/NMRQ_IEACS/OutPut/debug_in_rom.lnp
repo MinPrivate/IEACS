@@ -1,0 +1,4 @@
+--cpu ARM7TDMI ".\output\startup.o" ".\output\os_cpu_a.o" ".\output\os_cpu_c.o" ".\output\os_core.o" ".\output\os_task.o" ".\output\os_time.o" ".\output\helper.o" ".\output\main.o" ".\output\nmrq_key.o" ".\output\nmrq_eac.o" ".\output\nmrq_hi.o" ".\output\nmrq_com.o" ".\output\nmrq_task.o" ".\output\target.o" ".\output\irq.o" ".\output\nmrq_lcd240160.o" --strict --scatter ".\Source\mem_c.scf" 
+--autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\debug_in_rom.map" -o ".\OutPut\debug_in_rom.axf"

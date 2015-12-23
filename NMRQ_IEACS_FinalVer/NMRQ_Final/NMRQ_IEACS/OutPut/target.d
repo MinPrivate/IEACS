@@ -1,0 +1,16 @@
+.\OutPut\target.o: Target\Target.c
+.\OutPut\target.o: Target\..\Include\config.h
+.\OutPut\target.o: Target\..\Include\Includes.h
+.\OutPut\target.o: Target\..\Include\os_cpu.h
+.\OutPut\target.o: Target\..\Include\os_cfg.h
+.\OutPut\target.o: Target\..\Include\ucos_ii.h
+.\OutPut\target.o: C:\Keil\ARM\RV31\INC\string.h
+.\OutPut\target.o: C:\Keil\ARM\INC\Philips\LPC2103.h
+.\OutPut\target.o: Target\..\Include\LCD240160.h
+.\OutPut\target.o: C:\Keil\ARM\RV31\INC\stdio.h
+.\OutPut\target.o: C:\Keil\ARM\RV31\INC\ctype.h
+.\OutPut\target.o: C:\Keil\ARM\RV31\INC\stdlib.h
+.\OutPut\target.o: C:\Keil\ARM\RV31\INC\setjmp.h
+.\OutPut\target.o: C:\Keil\ARM\RV31\INC\rt_misc.h
+.\OutPut\target.o: Target\..\Include\target.h
+.\OutPut\target.o: C:\Keil\ARM\RV31\INC\rt_sys.h

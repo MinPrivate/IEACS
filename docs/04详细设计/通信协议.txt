@@ -1,0 +1,21 @@
+FLAG_LINK_REQUEST 	a 上位机连接状态请求    
+FLAG_LINK_INFO	  	b 下位机返回连接状态信息
+FLAG_STAT_REQUEST 	c 上位机发送的状态请求 
+FLAG_DOORLIGHT_SW 	d 上位机控制门灯开关指令(下位机同步门灯开关指令) d1开 d0关
+FLAG_DOORLIGHT_TIMING	e 上位机控制门灯定时指令(下位机同步门灯开关指令) e103511(时间4位，倒数第二位开关，倒数第一位使能）
+FLAG_ROOMLIGHT_SW	f 上位机控制卧室灯开关指令(下位机同步卧室灯开关指令) 之后跟上的数据是开关信息
+FLAG_ROOMLIGHT_TIMING	g 上位机控制卧室灯定时指令(下位机同步卧室灯定时信息) 
+FLAG_AC_SW		h 上位机控制空调开关指令(下位机同步空调开关信息) 之后跟上的数据是开关信息
+FLAG_AC_TEMP		i 上位机控制空调温度指令(下位机同步空调温度信息) i26
+FLAG_AC_TIMING		j 上位机控制空调定时指令(下位机同步空调定时信息) 之后跟上的数据是定时时间及开关信息
+FLAG_HEATER_SW		k 上位机控制热水器开关指令(下位机同步热水器开关信息) 之后跟上的数据是开关信息
+FLAG_HEATER_TEMP	l 上位机控制热水器温度指令(下位机同步热水器温度信息) 之后跟上的数据是温度信息
+FLAG_HEATER_TIMING	m 上位机控制热水器定时指令(下位机同步热水器定时信息) 之后跟上的数据是定时时间及开关信息
+FLAG_SYS_MODE		n 上位机控制系统工作模式指令(下位机同步系统工作模式指令) n0 n1 
+FLAG_SYS_TIME 		o 上位机同步系统时间指令   o201312130935
+FLAG_AD_LIGHT		p 光强感应数据 之后跟上的是具体光强数值p50
+FLAG_AD_TEMP		q 温度感应数据 之后跟上的是具体温度数值
+FLAG_ALARM_TF		r 小偷
+FLAG_ALARM_GAS		s 煤气泄漏
+FLAG_ALARM_NORMAL	t 一切正常 
+FLAG_DOWN_OFF		z 下位机关闭发送给上位机

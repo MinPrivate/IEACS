@@ -1,0 +1,34 @@
+*** Creating Trace Output File '.\OutPut\debug_in_rom.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '".\output\startup.o"'
+### List of Objects: adding '".\output\os_cpu_a.o"'
+### List of Objects: adding '".\output\os_cpu_c.o"'
+### List of Objects: adding '".\output\os_core.o"'
+### List of Objects: adding '".\output\os_task.o"'
+### List of Objects: adding '".\output\os_time.o"'
+### List of Objects: adding '".\output\helper.o"'
+### List of Objects: adding '".\output\main.o"'
+### List of Objects: adding '".\output\nmrq_key.o"'
+### List of Objects: adding '".\output\nmrq_eac.o"'
+### List of Objects: adding '".\output\nmrq_hi.o"'
+### List of Objects: adding '".\output\nmrq_com.o"'
+### List of Objects: adding '".\output\nmrq_task.o"'
+### List of Objects: adding '".\output\target.o"'
+### List of Objects: adding '".\output\irq.o"'
+### List of Objects: adding '".\output\nmrq_lcd240160.o"'
+### ADS-LD Command completed:
+--cpu ARM7TDMI ".\output\startup.o" ".\output\os_cpu_a.o" ".\output\os_cpu_c.o" ".\output\os_core.o" ".\output\os_task.o" ".\output\os_time.o" ".\output\helper.o" ".\output\main.o" ".\output\nmrq_key.o" ".\output\nmrq_eac.o" ".\output\nmrq_hi.o" ".\output\nmrq_com.o" ".\output\nmrq_task.o" ".\output\target.o" ".\output\irq.o" ".\output\nmrq_lcd240160.o" --strict --scatter ".\Source\mem_c.scf" 
+--autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\debug_in_rom.map" -o ".\OutPut\debug_in_rom.axf"### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: '.\OutPut\debug_in_rom.axf'
+### ADS-LD Command File: '.\OutPut\debug_in_rom.lnp'
+### Checking for dirty Components...
+### Creating CmdFile '.\OutPut\debug_in_rom.lnp', Handle=0x0000032C
+### Writing '.lnp' file
+### ADS-LD Command file '.\OutPut\debug_in_rom.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.

@@ -1,0 +1,1 @@
+-c --cpu ARM7TDMI -g -O0 --apcs=interwork -I "C:\Keil\ARM\INC" -I "C:\Keil\ARM\INC\Philips" -o ".\OutPut\nmrq_task.o" --omf_browse ".\OutPut\nmrq_task.crf" --depend ".\OutPut\nmrq_task.d" "Source\NMRQ_task.c"

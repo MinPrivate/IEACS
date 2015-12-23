@@ -1,0 +1,1257 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+C:\Documents and Settings\Administrator\桌面\NMRQ_IEACS\NMRQ_IEACS.uvproj
+Project File Date:  08/01/2013
+
+<h2>Output:</h2>
+Build target 'NMRQ_IEACS'
+assembling Startup.s...
+assembling Os_cpu_a.s...
+ARM\Os_cpu_a.s(152): warning: A1876W: Use of '|' as a synonym for the :OR: operator is deprecated.
+ARM\Os_cpu_a.s:   152 00000048         MSR     CPSR_c, #(NoInt | SYS32Mode)
+ARM\Os_cpu_a.s: 0 Errors, 1 Warning
+compiling Os_cpu_c.c...
+ARM\Os_cpu_c.c(47): error:  #5: cannot open source input file "config.h": No such file or directory
+ARM\Os_cpu_c.c:   #include "config.h"
+ARM\Os_cpu_c.c:                      ^
+ARM\Os_cpu_c.c: ARM\Os_cpu_c.c: 0 warnings, 1 error
+compiling OS_CORE.C...
+UcosII\OS_CORE.C(17): error:  #5: cannot open source input file "includes.h": No such file or directory
+UcosII\OS_CORE.C:   #include "includes.h"
+UcosII\OS_CORE.C:                        ^
+UcosII\OS_CORE.C: UcosII\OS_CORE.C: 0 warnings, 1 error
+compiling OS_FLAG.C...
+UcosII\OS_FLAG.C(16): error:  #5: cannot open source input file "INCLUDES.H": No such file or directory
+UcosII\OS_FLAG.C:   #include "INCLUDES.H"
+UcosII\OS_FLAG.C:                        ^
+UcosII\OS_FLAG.C: UcosII\OS_FLAG.C: 0 warnings, 1 error
+compiling OS_MBOX.C...
+UcosII\OS_MBOX.C(16): error:  #5: cannot open source input file "includes.h": No such file or directory
+UcosII\OS_MBOX.C:   #include "includes.h"
+UcosII\OS_MBOX.C:                        ^
+UcosII\OS_MBOX.C: UcosII\OS_MBOX.C: 0 warnings, 1 error
+compiling OS_MEM.C...
+UcosII\OS_MEM.C(16): error:  #5: cannot open source input file "includes.h": No such file or directory
+UcosII\OS_MEM.C:   #include "includes.h"
+UcosII\OS_MEM.C:                        ^
+UcosII\OS_MEM.C: UcosII\OS_MEM.C: 0 warnings, 1 error
+compiling OS_MUTEX.C...
+UcosII\OS_MUTEX.C(16): error:  #5: cannot open source input file "includes.h": No such file or directory
+UcosII\OS_MUTEX.C:   #include "includes.h"
+UcosII\OS_MUTEX.C:                        ^
+UcosII\OS_MUTEX.C: UcosII\OS_MUTEX.C: 0 warnings, 1 error
+compiling OS_Q.C...
+UcosII\OS_Q.C(16): error:  #5: cannot open source input file "includes.h": No such file or directory
+UcosII\OS_Q.C:   #include "includes.h"
+UcosII\OS_Q.C:                        ^
+UcosII\OS_Q.C: UcosII\OS_Q.C: 0 warnings, 1 error
+compiling OS_SEM.C...
+UcosII\OS_SEM.C(16): error:  #5: cannot open source input file "includes.h": No such file or directory
+UcosII\OS_SEM.C:   #include "includes.h"
+UcosII\OS_SEM.C:                        ^
+UcosII\OS_SEM.C: UcosII\OS_SEM.C: 0 warnings, 1 error
+compiling OS_TASK.C...
+UcosII\OS_TASK.C(16): error:  #5: cannot open source input file "includes.h": No such file or directory
+UcosII\OS_TASK.C:   #include "includes.h"
+UcosII\OS_TASK.C:                        ^
+UcosII\OS_TASK.C: UcosII\OS_TASK.C: 0 warnings, 1 error
+compiling OS_TIME.C...
+UcosII\OS_TIME.C(16): error:  #5: cannot open source input file "includes.h": No such file or directory
+UcosII\OS_TIME.C:   #include "includes.h"
+UcosII\OS_TIME.C:                        ^
+UcosII\OS_TIME.C: UcosII\OS_TIME.C: 0 warnings, 1 error
+compiling uCOS_II.C...
+UcosII\uCOS_II.C(15): error:  #5: cannot open source input file "includes.h": No such file or directory
+UcosII\uCOS_II.C:   #include "includes.h"
+UcosII\uCOS_II.C:                        ^
+UcosII\uCOS_II.C: UcosII\uCOS_II.C: 0 warnings, 1 error
+compiling helper.c...
+Source\helper.c(1): error:  #5: cannot open source input file "config.h": No such file or directory
+Source\helper.c:   #include "config.h"
+Source\helper.c:                      ^
+Source\helper.c: Source\helper.c: 0 warnings, 1 error
+compiling main.c...
+Source\main.c(2): error:  #5: cannot open source input file "config.h": No such file or directory
+Source\main.c:   #include "config.h"
+Source\main.c:                      ^
+Source\main.c: Source\main.c: 0 warnings, 1 error
+compiling Target.c...
+Target\Target.c(33): error:  #5: cannot open source input file "config.h": No such file or directory
+Target\Target.c:   #include "config.h"
+Target\Target.c:                      ^
+Target\Target.c: Target\Target.c: 0 warnings, 1 error
+compiling LCD12864.c...
+Driver\LCD12864.c(7): error:  #5: cannot open source input file "config.h": No such file or directory
+Driver\LCD12864.c:   #include  "config.h"
+Driver\LCD12864.c:                       ^
+Driver\LCD12864.c: Driver\LCD12864.c: 0 warnings, 1 error
+compiling Lcd240160.c...
+Driver\Lcd240160.c(2): error:  #5: cannot open source input file "helper.h": No such file or directory
+Driver\Lcd240160.c:   #include "helper.h"
+Driver\Lcd240160.c:                      ^
+Driver\Lcd240160.c: Driver\Lcd240160.c: 0 warnings, 1 error
+compiling uart.c...
+Driver\uart.c(2): error:  #5: cannot open source input file "config.h": No such file or directory
+Driver\uart.c:   #include "config.h"
+Driver\uart.c:                      ^
+Driver\uart.c: Driver\uart.c: 0 warnings, 1 error
+Target not created
+Build target 'NMRQ_IEACS'
+assembling Startup.s...
+assembling Os_cpu_a.s...
+compiling Os_cpu_c.c...
+ARM\Os_cpu_c.c(47): error:  #5: cannot open source input file "config.h": No such file or directory
+ARM\Os_cpu_c.c:   #include "config.h"
+ARM\Os_cpu_c.c:                      ^
+ARM\Os_cpu_c.c: ARM\Os_cpu_c.c: 0 warnings, 1 error
+compiling OS_CORE.C...
+UcosII\OS_CORE.C(17): error:  #5: cannot open source input file "includes.h": No such file or directory
+UcosII\OS_CORE.C:   #include "includes.h"
+UcosII\OS_CORE.C:                        ^
+UcosII\OS_CORE.C: UcosII\OS_CORE.C: 0 warnings, 1 error
+compiling OS_FLAG.C...
+UcosII\OS_FLAG.C(16): error:  #5: cannot open source input file "INCLUDES.H": No such file or directory
+UcosII\OS_FLAG.C:   #include "INCLUDES.H"
+UcosII\OS_FLAG.C:                        ^
+UcosII\OS_FLAG.C: UcosII\OS_FLAG.C: 0 warnings, 1 error
+compiling OS_MBOX.C...
+UcosII\OS_MBOX.C(16): error:  #5: cannot open source input file "includes.h": No such file or directory
+UcosII\OS_MBOX.C:   #include "includes.h"
+UcosII\OS_MBOX.C:                        ^
+UcosII\OS_MBOX.C: UcosII\OS_MBOX.C: 0 warnings, 1 error
+compiling OS_MEM.C...
+UcosII\OS_MEM.C(16): error:  #5: cannot open source input file "includes.h": No such file or directory
+UcosII\OS_MEM.C:   #include "includes.h"
+UcosII\OS_MEM.C:                        ^
+UcosII\OS_MEM.C: UcosII\OS_MEM.C: 0 warnings, 1 error
+compiling OS_MUTEX.C...
+UcosII\OS_MUTEX.C(16): error:  #5: cannot open source input file "includes.h": No such file or directory
+UcosII\OS_MUTEX.C:   #include "includes.h"
+UcosII\OS_MUTEX.C:                        ^
+UcosII\OS_MUTEX.C: UcosII\OS_MUTEX.C: 0 warnings, 1 error
+compiling OS_Q.C...
+UcosII\OS_Q.C(16): error:  #5: cannot open source input file "includes.h": No such file or directory
+UcosII\OS_Q.C:   #include "includes.h"
+UcosII\OS_Q.C:                        ^
+UcosII\OS_Q.C: UcosII\OS_Q.C: 0 warnings, 1 error
+compiling OS_SEM.C...
+UcosII\OS_SEM.C(16): error:  #5: cannot open source input file "includes.h": No such file or directory
+UcosII\OS_SEM.C:   #include "includes.h"
+UcosII\OS_SEM.C:                        ^
+UcosII\OS_SEM.C: UcosII\OS_SEM.C: 0 warnings, 1 error
+compiling OS_TASK.C...
+UcosII\OS_TASK.C(16): error:  #5: cannot open source input file "includes.h": No such file or directory
+UcosII\OS_TASK.C:   #include "includes.h"
+UcosII\OS_TASK.C:                        ^
+UcosII\OS_TASK.C: UcosII\OS_TASK.C: 0 warnings, 1 error
+compiling OS_TIME.C...
+UcosII\OS_TIME.C(16): error:  #5: cannot open source input file "includes.h": No such file or directory
+UcosII\OS_TIME.C:   #include "includes.h"
+UcosII\OS_TIME.C:                        ^
+UcosII\OS_TIME.C: UcosII\OS_TIME.C: 0 warnings, 1 error
+compiling uCOS_II.C...
+UcosII\uCOS_II.C(15): error:  #5: cannot open source input file "includes.h": No such file or directory
+UcosII\uCOS_II.C:   #include "includes.h"
+UcosII\uCOS_II.C:                        ^
+UcosII\uCOS_II.C: UcosII\uCOS_II.C: 0 warnings, 1 error
+compiling helper.c...
+Source\helper.c(1): error:  #5: cannot open source input file "config.h": No such file or directory
+Source\helper.c:   #include "config.h"
+Source\helper.c:                      ^
+Source\helper.c: Source\helper.c: 0 warnings, 1 error
+compiling main.c...
+Source\main.c(2): error:  #5: cannot open source input file "config.h": No such file or directory
+Source\main.c:   #include "config.h"
+Source\main.c:                      ^
+Source\main.c: Source\main.c: 0 warnings, 1 error
+compiling Target.c...
+Target\Target.c(33): error:  #5: cannot open source input file "config.h": No such file or directory
+Target\Target.c:   #include "config.h"
+Target\Target.c:                      ^
+Target\Target.c: Target\Target.c: 0 warnings, 1 error
+compiling LCD12864.c...
+Driver\LCD12864.c(7): error:  #5: cannot open source input file "config.h": No such file or directory
+Driver\LCD12864.c:   #include  "config.h"
+Driver\LCD12864.c:                       ^
+Driver\LCD12864.c: Driver\LCD12864.c: 0 warnings, 1 error
+compiling Lcd240160.c...
+Driver\Lcd240160.c(2): error:  #5: cannot open source input file "helper.h": No such file or directory
+Driver\Lcd240160.c:   #include "helper.h"
+Driver\Lcd240160.c:                      ^
+Driver\Lcd240160.c: Driver\Lcd240160.c: 0 warnings, 1 error
+compiling uart.c...
+Driver\uart.c(2): error:  #5: cannot open source input file "config.h": No such file or directory
+Driver\uart.c:   #include "config.h"
+Driver\uart.c:                      ^
+Driver\uart.c: Driver\uart.c: 0 warnings, 1 error
+Target not created
+Build target 'NMRQ_IEACS'
+compiling Os_cpu_c.c...
+ARM\Os_cpu_c.c(141): warning:  #1267-D: Implicit physical register R0 should be defined as a variable
+ARM\Os_cpu_c.c:                   MRS     R0, SPSR
+ARM\Os_cpu_c.c:                           ^
+ARM\Os_cpu_c.c: ARM\Os_cpu_c.c: 1 warning, 0 errors
+compiling OS_CORE.C...
+UcosII\OS_CORE.C(17): error:  #5: cannot open source input file "includes.h": No such file or directory
+UcosII\OS_CORE.C:   #include "includes.h"
+UcosII\OS_CORE.C:                        ^
+UcosII\OS_CORE.C: UcosII\OS_CORE.C: 0 warnings, 1 error
+compiling OS_FLAG.C...
+UcosII\OS_FLAG.C(16): error:  #5: cannot open source input file "INCLUDES.H": No such file or directory
+UcosII\OS_FLAG.C:   #include "INCLUDES.H"
+UcosII\OS_FLAG.C:                        ^
+UcosII\OS_FLAG.C: UcosII\OS_FLAG.C: 0 warnings, 1 error
+compiling OS_MBOX.C...
+UcosII\OS_MBOX.C(16): error:  #5: cannot open source input file "includes.h": No such file or directory
+UcosII\OS_MBOX.C:   #include "includes.h"
+UcosII\OS_MBOX.C:                        ^
+UcosII\OS_MBOX.C: UcosII\OS_MBOX.C: 0 warnings, 1 error
+compiling OS_MEM.C...
+UcosII\OS_MEM.C(16): error:  #5: cannot open source input file "includes.h": No such file or directory
+UcosII\OS_MEM.C:   #include "includes.h"
+UcosII\OS_MEM.C:                        ^
+UcosII\OS_MEM.C: UcosII\OS_MEM.C: 0 warnings, 1 error
+compiling OS_MUTEX.C...
+UcosII\OS_MUTEX.C(16): error:  #5: cannot open source input file "includes.h": No such file or directory
+UcosII\OS_MUTEX.C:   #include "includes.h"
+UcosII\OS_MUTEX.C:                        ^
+UcosII\OS_MUTEX.C: UcosII\OS_MUTEX.C: 0 warnings, 1 error
+compiling OS_Q.C...
+UcosII\OS_Q.C(16): error:  #5: cannot open source input file "includes.h": No such file or directory
+UcosII\OS_Q.C:   #include "includes.h"
+UcosII\OS_Q.C:                        ^
+UcosII\OS_Q.C: UcosII\OS_Q.C: 0 warnings, 1 error
+compiling OS_SEM.C...
+UcosII\OS_SEM.C(16): error:  #5: cannot open source input file "includes.h": No such file or directory
+UcosII\OS_SEM.C:   #include "includes.h"
+UcosII\OS_SEM.C:                        ^
+UcosII\OS_SEM.C: UcosII\OS_SEM.C: 0 warnings, 1 error
+compiling OS_TASK.C...
+UcosII\OS_TASK.C(16): error:  #5: cannot open source input file "includes.h": No such file or directory
+UcosII\OS_TASK.C:   #include "includes.h"
+UcosII\OS_TASK.C:                        ^
+UcosII\OS_TASK.C: UcosII\OS_TASK.C: 0 warnings, 1 error
+compiling OS_TIME.C...
+UcosII\OS_TIME.C(16): error:  #5: cannot open source input file "includes.h": No such file or directory
+UcosII\OS_TIME.C:   #include "includes.h"
+UcosII\OS_TIME.C:                        ^
+UcosII\OS_TIME.C: UcosII\OS_TIME.C: 0 warnings, 1 error
+compiling uCOS_II.C...
+UcosII\uCOS_II.C(15): error:  #5: cannot open source input file "includes.h": No such file or directory
+UcosII\uCOS_II.C:   #include "includes.h"
+UcosII\uCOS_II.C:                        ^
+UcosII\uCOS_II.C: UcosII\uCOS_II.C: 0 warnings, 1 error
+compiling helper.c...
+Source\helper.c(1): error:  #5: cannot open source input file "config.h": No such file or directory
+Source\helper.c:   #include "config.h"
+Source\helper.c:                      ^
+Source\helper.c: Source\helper.c: 0 warnings, 1 error
+compiling main.c...
+Source\main.c(2): error:  #5: cannot open source input file "config.h": No such file or directory
+Source\main.c:   #include "config.h"
+Source\main.c:                      ^
+Source\main.c: Source\main.c: 0 warnings, 1 error
+compiling Target.c...
+Target\Target.c(33): error:  #5: cannot open source input file "config.h": No such file or directory
+Target\Target.c:   #include "config.h"
+Target\Target.c:                      ^
+Target\Target.c: Target\Target.c: 0 warnings, 1 error
+compiling LCD12864.c...
+Driver\LCD12864.c(7): error:  #5: cannot open source input file "config.h": No such file or directory
+Driver\LCD12864.c:   #include  "config.h"
+Driver\LCD12864.c:                       ^
+Driver\LCD12864.c: Driver\LCD12864.c: 0 warnings, 1 error
+compiling Lcd240160.c...
+Driver\Lcd240160.c(2): error:  #5: cannot open source input file "helper.h": No such file or directory
+Driver\Lcd240160.c:   #include "helper.h"
+Driver\Lcd240160.c:                      ^
+Driver\Lcd240160.c: Driver\Lcd240160.c: 0 warnings, 1 error
+compiling uart.c...
+Driver\uart.c(2): error:  #5: cannot open source input file "config.h": No such file or directory
+Driver\uart.c:   #include "config.h"
+Driver\uart.c:                      ^
+Driver\uart.c: Driver\uart.c: 0 warnings, 1 error
+Target not created
+Build target 'NMRQ_IEACS'
+compiling OS_CORE.C...
+UcosII\OS_CORE.C(68): warning:  #177-D: function "OS_InitTaskStat" was declared but never referenced
+UcosII\OS_CORE.C:   static  void  OS_InitTaskStat(void);
+UcosII\OS_CORE.C:                 ^
+UcosII\OS_CORE.C: UcosII\OS_CORE.C: 1 warning, 0 errors
+compiling OS_FLAG.C...
+UcosII\OS_FLAG.C(16): error:  #5: cannot open source input file "INCLUDES.H": No such file or directory
+UcosII\OS_FLAG.C:   #include "INCLUDES.H"
+UcosII\OS_FLAG.C:                        ^
+UcosII\OS_FLAG.C: UcosII\OS_FLAG.C: 0 warnings, 1 error
+compiling OS_MBOX.C...
+UcosII\OS_MBOX.C(16): error:  #5: cannot open source input file "includes.h": No such file or directory
+UcosII\OS_MBOX.C:   #include "includes.h"
+UcosII\OS_MBOX.C:                        ^
+UcosII\OS_MBOX.C: UcosII\OS_MBOX.C: 0 warnings, 1 error
+compiling OS_MEM.C...
+UcosII\OS_MEM.C(16): error:  #5: cannot open source input file "includes.h": No such file or directory
+UcosII\OS_MEM.C:   #include "includes.h"
+UcosII\OS_MEM.C:                        ^
+UcosII\OS_MEM.C: UcosII\OS_MEM.C: 0 warnings, 1 error
+compiling OS_MUTEX.C...
+UcosII\OS_MUTEX.C(16): error:  #5: cannot open source input file "includes.h": No such file or directory
+UcosII\OS_MUTEX.C:   #include "includes.h"
+UcosII\OS_MUTEX.C:                        ^
+UcosII\OS_MUTEX.C: UcosII\OS_MUTEX.C: 0 warnings, 1 error
+compiling OS_Q.C...
+UcosII\OS_Q.C(16): error:  #5: cannot open source input file "includes.h": No such file or directory
+UcosII\OS_Q.C:   #include "includes.h"
+UcosII\OS_Q.C:                        ^
+UcosII\OS_Q.C: UcosII\OS_Q.C: 0 warnings, 1 error
+compiling OS_SEM.C...
+UcosII\OS_SEM.C(16): error:  #5: cannot open source input file "includes.h": No such file or directory
+UcosII\OS_SEM.C:   #include "includes.h"
+UcosII\OS_SEM.C:                        ^
+UcosII\OS_SEM.C: UcosII\OS_SEM.C: 0 warnings, 1 error
+compiling OS_TASK.C...
+UcosII\OS_TASK.C(16): error:  #5: cannot open source input file "includes.h": No such file or directory
+UcosII\OS_TASK.C:   #include "includes.h"
+UcosII\OS_TASK.C:                        ^
+UcosII\OS_TASK.C: UcosII\OS_TASK.C: 0 warnings, 1 error
+compiling OS_TIME.C...
+UcosII\OS_TIME.C(16): error:  #5: cannot open source input file "includes.h": No such file or directory
+UcosII\OS_TIME.C:   #include "includes.h"
+UcosII\OS_TIME.C:                        ^
+UcosII\OS_TIME.C: UcosII\OS_TIME.C: 0 warnings, 1 error
+compiling uCOS_II.C...
+UcosII\uCOS_II.C(15): error:  #5: cannot open source input file "includes.h": No such file or directory
+UcosII\uCOS_II.C:   #include "includes.h"
+UcosII\uCOS_II.C:                        ^
+UcosII\uCOS_II.C: UcosII\uCOS_II.C: 0 warnings, 1 error
+compiling helper.c...
+Source\helper.c(1): error:  #5: cannot open source input file "config.h": No such file or directory
+Source\helper.c:   #include "config.h"
+Source\helper.c:                      ^
+Source\helper.c: Source\helper.c: 0 warnings, 1 error
+compiling main.c...
+Source\main.c(2): error:  #5: cannot open source input file "config.h": No such file or directory
+Source\main.c:   #include "config.h"
+Source\main.c:                      ^
+Source\main.c: Source\main.c: 0 warnings, 1 error
+compiling Target.c...
+Target\Target.c(33): error:  #5: cannot open source input file "config.h": No such file or directory
+Target\Target.c:   #include "config.h"
+Target\Target.c:                      ^
+Target\Target.c: Target\Target.c: 0 warnings, 1 error
+compiling LCD12864.c...
+Driver\LCD12864.c(7): error:  #5: cannot open source input file "config.h": No such file or directory
+Driver\LCD12864.c:   #include  "config.h"
+Driver\LCD12864.c:                       ^
+Driver\LCD12864.c: Driver\LCD12864.c: 0 warnings, 1 error
+compiling Lcd240160.c...
+compiling uart.c...
+Target not created
+Build target 'NMRQ_IEACS'
+compiling OS_FLAG.C...
+compiling OS_MBOX.C...
+compiling OS_MEM.C...
+compiling OS_MUTEX.C...
+compiling OS_Q.C...
+compiling OS_SEM.C...
+compiling OS_TASK.C...
+compiling OS_TIME.C...
+compiling uCOS_II.C...
+UcosII\uCOS_II.C(19): error:  #5: cannot open source input file "\software\ucos-ii\source\os_core.c": No such file or directory
+UcosII\uCOS_II.C:   #include "\software\ucos-ii\source\os_core.c"
+UcosII\uCOS_II.C:                                                ^
+UcosII\uCOS_II.C: UcosII\uCOS_II.C: 0 warnings, 1 error
+compiling helper.c...
+compiling main.c...
+compiling Target.c...
+Target\Target.c(125): warning:  #69-D: integer conversion resulted in truncation
+Target\Target.c:       T0IR = 0xffffffff;
+Target\Target.c:              ^
+Target\Target.c(319): warning:  #69-D: integer conversion resulted in truncation
+Target\Target.c:       T0IR = 0xffffffff;
+Target\Target.c:              ^
+Target\Target.c: Target\Target.c: 2 warnings, 0 errors
+compiling LCD12864.c...
+Driver\LCD12864.c(51): error:  #20: identifier "uint8" is undefined
+Driver\LCD12864.c:   extern uint8 CM[];
+Driver\LCD12864.c:          ^
+Driver\LCD12864.c(52): error:  #20: identifier "uint8" is undefined
+Driver\LCD12864.c:   extern uint8 number[12][16];   
+Driver\LCD12864.c:          ^
+Driver\LCD12864.c(53): error:  #20: identifier "uint8" is undefined
+Driver\LCD12864.c:   extern uint8 hanzi[8][32]; 
+Driver\LCD12864.c:          ^
+Driver\LCD12864.c(54): error:  #20: identifier "uint8" is undefined
+Driver\LCD12864.c:   extern uint8 Bmp12864[];
+Driver\LCD12864.c:          ^
+Driver\LCD12864.c(55): error:  #20: identifier "uint8" is undefined
+Driver\LCD12864.c:   extern uint8 Bmp4030[];
+Driver\LCD12864.c:          ^
+Driver\LCD12864.c(61): error:  #20: identifier "uint32" is undefined
+Driver\LCD12864.c:   void Delay(uint32 x)
+Driver\LCD12864.c:              ^
+Driver\LCD12864.c(98): error:  #20: identifier "uint8" is undefined
+Driver\LCD12864.c:   void vWriteCMD(uint8 ucCMD)
+Driver\LCD12864.c:                  ^
+Driver\LCD12864.c(116): error:  #20: identifier "uint8" is undefined
+Driver\LCD12864.c:   void vWriteData(uint8 ucData)
+Driver\LCD12864.c:                   ^
+Driver\LCD12864.c(136): error:  #20: identifier "uint8" is undefined
+Driver\LCD12864.c:      uint8 ucPage,ucLine,nLoop;
+Driver\LCD12864.c:      ^
+Driver\LCD12864.c(193): error:  #20: identifier "uint8" is undefined
+Driver\LCD12864.c:   void Show88(uint8 x_add,uint8 y_add,uint8 *po)
+Driver\LCD12864.c:               ^
+Driver\LCD12864.c(193): error:  #20: identifier "uint8" is undefined
+Driver\LCD12864.c:   void Show88(uint8 x_add,uint8 y_add,uint8 *po)
+Driver\LCD12864.c:                           ^
+Driver\LCD12864.c(193): error:  #20: identifier "uint8" is undefined
+Driver\LCD12864.c:   void Show88(uint8 x_add,uint8 y_add,uint8 *po)
+Driver\LCD12864.c:                                       ^
+Driver\LCD12864.c(195): error:  #20: identifier "uint8" is undefined
+Driver\LCD12864.c:       uint8 nLoop,ucPage,ucLine;
+Driver\LCD12864.c:       ^
+Driver\LCD12864.c(230): error:  #20: identifier "uint8" is undefined
+Driver\LCD12864.c:   void ShowFullScreenBmp(uint8 *po)
+Driver\LCD12864.c:                          ^
+Driver\LCD12864.c(232): error:  #20: identifier "uint8" is undefined
+Driver\LCD12864.c:       uint8 nChar,ucPage;      
+Driver\LCD12864.c:       ^
+Driver\LCD12864.c(252): error:  #20: identifier "uint8" is undefined
+Driver\LCD12864.c:   void ShowPicture(uint8 PageAddr,uint8 YAddr,uint8 pixelsX,uint8 pixelsY,uint8 *po)
+Driver\LCD12864.c:                    ^
+Driver\LCD12864.c(252): error:  #20: identifier "uint8" is undefined
+Driver\LCD12864.c:   void ShowPicture(uint8 PageAddr,uint8 YAddr,uint8 pixelsX,uint8 pixelsY,uint8 *po)
+Driver\LCD12864.c:                                   ^
+Driver\LCD12864.c(252): error:  #20: identifier "uint8" is undefined
+Driver\LCD12864.c:   void ShowPicture(uint8 PageAddr,uint8 YAddr,uint8 pixelsX,uint8 pixelsY,uint8 *po)
+Driver\LCD12864.c:                                               ^
+Driver\LCD12864.c(252): error:  #20: identifier "uint8" is undefined
+Driver\LCD12864.c:   void ShowPicture(uint8 PageAddr,uint8 YAddr,uint8 pixelsX,uint8 pixelsY,uint8 *po)
+Driver\LCD12864.c:                                                             ^
+Driver\LCD12864.c(252): error:  #20: identifier "uint8" is undefined
+Driver\LCD12864.c:   void ShowPicture(uint8 PageAddr,uint8 YAddr,uint8 pixelsX,uint8 pixelsY,uint8 *po)
+Driver\LCD12864.c:                                                                           ^
+Driver\LCD12864.c(254): error:  #20: identifier "uint8" is undefined
+Driver\LCD12864.c:       uint8 nLoop1,nLoop2;
+Driver\LCD12864.c:       ^
+Driver\LCD12864.c(255): error:  #20: identifier "uint8" is undefined
+Driver\LCD12864.c:       uint8 ZScrFlag;
+Driver\LCD12864.c:       ^
+Driver\LCD12864.c(301): error:  #20: identifier "uint8" is undefined
+Driver\LCD12864.c:   void DispChOrCi(uint8 Flag,uint8 x_add,uint8 y_add,uint8 *po)
+Driver\LCD12864.c:                   ^
+Driver\LCD12864.c(301): error:  #20: identifier "uint8" is undefined
+Driver\LCD12864.c:   void DispChOrCi(uint8 Flag,uint8 x_add,uint8 y_add,uint8 *po)
+Driver\LCD12864.c:                              ^
+Driver\LCD12864.c(301): error:  #20: identifier "uint8" is undefined
+Driver\LCD12864.c:   void DispChOrCi(uint8 Flag,uint8 x_add,uint8 y_add,uint8 *po)
+Driver\LCD12864.c:                                          ^
+Driver\LCD12864.c(301): error:  #20: identifier "uint8" is undefined
+Driver\LCD12864.c:   void DispChOrCi(uint8 Flag,uint8 x_add,uint8 y_add,uint8 *po)
+Driver\LCD12864.c:                                                      ^
+Driver\LCD12864.c(303): error:  #20: identifier "uint8" is undefined
+Driver\LCD12864.c:      uint8 nLoop,ucPage,ucLine;
+Driver\LCD12864.c:      ^
+Driver\LCD12864.c(378): error:  #20: identifier "uint8" is undefined
+Driver\LCD12864.c:      uint8 nLoop;
+Driver\LCD12864.c:      ^
+Driver\LCD12864.c(411): warning:  #1-D: last line of file ends without a newline
+Driver\LCD12864.c:   //////////////////////////////////////////////////////////////////////////////
+Driver\LCD12864.c:                                                                                 ^
+Driver\LCD12864.c: Driver\LCD12864.c: 1 warning, 28 errors
+Target not created
+Build target 'NMRQ_IEACS'
+compiling uCOS_II.C...
+compiling LCD12864.c...
+Driver\LCD12864.c(136): error:  #20: identifier "uint8" is undefined
+Driver\LCD12864.c:      uint8 ucPage,ucLine,nLoop;
+Driver\LCD12864.c:      ^
+Driver\LCD12864.c(232): error:  #20: identifier "uint8" is undefined
+Driver\LCD12864.c:       uint8 nChar,ucPage;      
+Driver\LCD12864.c:       ^
+Driver\LCD12864.c(254): error:  #20: identifier "uint8" is undefined
+Driver\LCD12864.c:       uint8 nLoop1,nLoop2;
+Driver\LCD12864.c:       ^
+Driver\LCD12864.c(255): error:  #20: identifier "uint8" is undefined
+Driver\LCD12864.c:       uint8 ZScrFlag;
+Driver\LCD12864.c:       ^
+Driver\LCD12864.c(303): error:  #20: identifier "uint8" is undefined
+Driver\LCD12864.c:      uint8 nLoop,ucPage,ucLine;
+Driver\LCD12864.c:      ^
+Driver\LCD12864.c(411): warning:  #1-D: last line of file ends without a newline
+Driver\LCD12864.c:   //////////////////////////////////////////////////////////////////////////////
+Driver\LCD12864.c:                                                                                 ^
+Driver\LCD12864.c: Driver\LCD12864.c: 1 warning, 5 errors
+Target not created
+Build target 'NMRQ_IEACS'
+compiling LCD12864.c...
+Driver\LCD12864.c(411): warning:  #1-D: last line of file ends without a newline
+Driver\LCD12864.c:   //////////////////////////////////////////////////////////////////////////////
+Driver\LCD12864.c:                                                                                 ^
+Driver\LCD12864.c: Driver\LCD12864.c: 1 warning, 0 errors
+linking...
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSPrioCur multiply defined (by ucos_ii.o and os_core.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSPrioHighRdy multiply defined (by ucos_ii.o and os_core.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSRunning multiply defined (by ucos_ii.o and os_core.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSTCBCur multiply defined (by ucos_ii.o and os_core.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSTCBHighRdy multiply defined (by ucos_ii.o and os_core.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSTCBPrioTbl multiply defined (by ucos_ii.o and os_core.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSEventTbl multiply defined (by ucos_ii.o and os_core.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSFlagTbl multiply defined (by ucos_ii.o and os_core.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSTaskIdleStk multiply defined (by ucos_ii.o and os_core.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSTCBTbl multiply defined (by ucos_ii.o and os_core.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSMemTbl multiply defined (by ucos_ii.o and os_core.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSQTbl multiply defined (by ucos_ii.o and os_core.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSMapTbl multiply defined (by ucos_ii.o and os_core.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSUnMapTbl multiply defined (by ucos_ii.o and os_core.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSCtxSwCtr multiply defined (by ucos_ii.o and os_core.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSEventFreeList multiply defined (by ucos_ii.o and os_core.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSFlagFreeList multiply defined (by ucos_ii.o and os_core.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSIntNesting multiply defined (by ucos_ii.o and os_core.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSIntExitY multiply defined (by ucos_ii.o and os_core.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSLockNesting multiply defined (by ucos_ii.o and os_core.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSRdyGrp multiply defined (by ucos_ii.o and os_core.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSRdyTbl multiply defined (by ucos_ii.o and os_core.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSTaskCtr multiply defined (by ucos_ii.o and os_core.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSIdleCtr multiply defined (by ucos_ii.o and os_core.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSTCBFreeList multiply defined (by ucos_ii.o and os_core.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSTCBList multiply defined (by ucos_ii.o and os_core.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSMemFreeList multiply defined (by ucos_ii.o and os_core.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSQFreeList multiply defined (by ucos_ii.o and os_core.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSTime multiply defined (by ucos_ii.o and os_core.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OS_TaskIdle multiply defined (by ucos_ii.o and os_core.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSInit multiply defined (by ucos_ii.o and os_core.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSIntEnter multiply defined (by ucos_ii.o and os_core.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSIntExit multiply defined (by ucos_ii.o and os_core.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSSchedLock multiply defined (by ucos_ii.o and os_core.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OS_Sched multiply defined (by ucos_ii.o and os_core.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSSchedUnlock multiply defined (by ucos_ii.o and os_core.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSStart multiply defined (by ucos_ii.o and os_core.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSTimeTick multiply defined (by ucos_ii.o and os_core.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSVersion multiply defined (by ucos_ii.o and os_core.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OS_Dummy multiply defined (by ucos_ii.o and os_core.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OS_EventTaskRdy multiply defined (by ucos_ii.o and os_core.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OS_EventTaskWait multiply defined (by ucos_ii.o and os_core.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OS_EventTO multiply defined (by ucos_ii.o and os_core.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OS_EventWaitListInit multiply defined (by ucos_ii.o and os_core.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OS_TCBInit multiply defined (by ucos_ii.o and os_core.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSTaskCreateExt multiply defined (by ucos_ii.o and os_task.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OS_FlagInit multiply defined (by ucos_ii.o and os_flag.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OS_MemInit multiply defined (by ucos_ii.o and os_mem.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OS_QInit multiply defined (by ucos_ii.o and os_q.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSFlagAccept multiply defined (by ucos_ii.o and os_flag.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSFlagCreate multiply defined (by ucos_ii.o and os_flag.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OS_FlagUnlink multiply defined (by ucos_ii.o and os_flag.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSFlagDel multiply defined (by ucos_ii.o and os_flag.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSFlagPend multiply defined (by ucos_ii.o and os_flag.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSFlagPost multiply defined (by ucos_ii.o and os_flag.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSFlagQuery multiply defined (by ucos_ii.o and os_flag.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSMboxAccept multiply defined (by ucos_ii.o and os_mbox.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSMboxCreate multiply defined (by ucos_ii.o and os_mbox.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSMboxDel multiply defined (by ucos_ii.o and os_mbox.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSMboxPend multiply defined (by ucos_ii.o and os_mbox.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSMboxPost multiply defined (by ucos_ii.o and os_mbox.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSMboxPostOpt multiply defined (by ucos_ii.o and os_mbox.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSMboxQuery multiply defined (by ucos_ii.o and os_mbox.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSMemCreate multiply defined (by ucos_ii.o and os_mem.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSMemGet multiply defined (by ucos_ii.o and os_mem.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSMemPut multiply defined (by ucos_ii.o and os_mem.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSMemQuery multiply defined (by ucos_ii.o and os_mem.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSMutexAccept multiply defined (by ucos_ii.o and os_mutex.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSMutexCreate multiply defined (by ucos_ii.o and os_mutex.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSMutexDel multiply defined (by ucos_ii.o and os_mutex.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSMutexPend multiply defined (by ucos_ii.o and os_mutex.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSMutexPost multiply defined (by ucos_ii.o and os_mutex.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSMutexQuery multiply defined (by ucos_ii.o and os_mutex.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSQAccept multiply defined (by ucos_ii.o and os_q.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSQCreate multiply defined (by ucos_ii.o and os_q.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSQDel multiply defined (by ucos_ii.o and os_q.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSQFlush multiply defined (by ucos_ii.o and os_q.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSQPend multiply defined (by ucos_ii.o and os_q.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSQPost multiply defined (by ucos_ii.o and os_q.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSQPostFront multiply defined (by ucos_ii.o and os_q.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSQPostOpt multiply defined (by ucos_ii.o and os_q.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSQQuery multiply defined (by ucos_ii.o and os_q.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSSemAccept multiply defined (by ucos_ii.o and os_sem.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSSemCreate multiply defined (by ucos_ii.o and os_sem.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSSemDel multiply defined (by ucos_ii.o and os_sem.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSSemPend multiply defined (by ucos_ii.o and os_sem.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSSemPost multiply defined (by ucos_ii.o and os_sem.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSSemQuery multiply defined (by ucos_ii.o and os_sem.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSTaskChangePrio multiply defined (by ucos_ii.o and os_task.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSTaskCreate multiply defined (by ucos_ii.o and os_task.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSTaskDel multiply defined (by ucos_ii.o and os_task.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSTaskDelReq multiply defined (by ucos_ii.o and os_task.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSTaskResume multiply defined (by ucos_ii.o and os_task.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSTaskStkChk multiply defined (by ucos_ii.o and os_task.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSTaskSuspend multiply defined (by ucos_ii.o and os_task.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSTaskQuery multiply defined (by ucos_ii.o and os_task.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSTimeDly multiply defined (by ucos_ii.o and os_time.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSTimeDlyHMSM multiply defined (by ucos_ii.o and os_time.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSTimeDlyResume multiply defined (by ucos_ii.o and os_time.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSTimeGet multiply defined (by ucos_ii.o and os_time.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6200E: Symbol OSTimeSet multiply defined (by ucos_ii.o and os_time.o).
+.\OutPut\NMRQ_IEACS.axf: Not enough information to list image symbols.
+.\OutPut\NMRQ_IEACS.axf: Not enough information to list the image map.
+.\OutPut\NMRQ_IEACS.axf: Finished: 2 information, 0 warning and 101 error messages.
+Target not created
+Build target 'NMRQ_IEACS'
+linking...
+.\OutPut\NMRQ_IEACS.axf: Error: L6218E: Undefined symbol IRQ_Handler (referred from target.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6218E: Undefined symbol Timer0_Handler (referred from target.o).
+.\OutPut\NMRQ_IEACS.axf: Not enough information to list image symbols.
+.\OutPut\NMRQ_IEACS.axf: Finished: 1 information, 0 warning and 2 error messages.
+Target not created
+Build target 'NMRQ_IEACS'
+linking...
+.\OutPut\NMRQ_IEACS.axf: Error: L6218E: Undefined symbol IRQ_Handler (referred from target.o).
+.\OutPut\NMRQ_IEACS.axf: Error: L6218E: Undefined symbol Timer0_Handler (referred from target.o).
+.\OutPut\NMRQ_IEACS.axf: Not enough information to list image symbols.
+.\OutPut\NMRQ_IEACS.axf: Finished: 1 information, 0 warning and 2 error messages.
+Target not created
+Build target 'NMRQ_IEACS'
+assembling IRQ.lst...
+ARM\IRQ.lst(4): error: A1163E: Unknown opcode Macro , expecting opcode or Macro
+ARM\IRQ.lst:     4 00000000 ARM Macro Assembler    Page 1 
+ARM\IRQ.lst:                    ^
+ARM\IRQ.lst(7): error: A1137E: Unexpected characters at end of line
+ARM\IRQ.lst:     7 00000000     1 00000000         ;/****************************************Copyright (c)*
+ARM\IRQ.lst:                    ^
+ARM\IRQ.lst(8): error: A1137E: Unexpected characters at end of line
+ARM\IRQ.lst:     8 00000000                        *************************************************
+ARM\IRQ.lst:                                       ^
+ARM\IRQ.lst(9): error: A1137E: Unexpected characters at end of line
+ARM\IRQ.lst:     9 00000000     2 00000000         ;**                               Guangzou ZLG-MCU Devel
+ARM\IRQ.lst:                    ^
+ARM\IRQ.lst(10): error: A1163E: Unknown opcode opment , expecting opcode or Macro
+ARM\IRQ.lst:    10 00000000                        opment Co.,LTD.
+ARM\IRQ.lst:                                       ^
+ARM\IRQ.lst(11): error: A1137E: Unexpected characters at end of line
+ARM\IRQ.lst:    11 00000000     3 00000000         ;**                                      graduate school
+ARM\IRQ.lst:                    ^
+ARM\IRQ.lst(13): error: A1137E: Unexpected characters at end of line
+ARM\IRQ.lst:    13 00000000     4 00000000         ;**                                 http://www.zlgmcu.co
+ARM\IRQ.lst:                    ^
+ARM\IRQ.lst(14): error: A1163E: Unknown opcode m , expecting opcode or Macro
+ARM\IRQ.lst:    14 00000000                        m
+ARM\IRQ.lst:                                       ^
+ARM\IRQ.lst(15): error: A1137E: Unexpected characters at end of line
+ARM\IRQ.lst:    15 00000000     5 00000000         ;**
+ARM\IRQ.lst:                    ^
+ARM\IRQ.lst(16): error: A1137E: Unexpected characters at end of line
+ARM\IRQ.lst:    16 00000000     6 00000000         ;**--------------File Info------------------------------
+ARM\IRQ.lst:                    ^
+ARM\IRQ.lst(17): error: A1137E: Unexpected characters at end of line
+ARM\IRQ.lst:    17 00000000                        -------------------------------------------------
+ARM\IRQ.lst:                                       ^
+ARM\IRQ.lst(18): error: A1137E: Unexpected characters at end of line
+ARM\IRQ.lst:    18 00000000     7 00000000         ;** File Name: IRQ.s
+ARM\IRQ.lst:                    ^
+ARM\IRQ.lst(19): error: A1137E: Unexpected characters at end of line
+ARM\IRQ.lst:    19 00000000     8 00000000         ;** Last modified Date:  2004-06-14
+ARM\IRQ.lst:                    ^
+ARM\IRQ.lst(20): error: A1137E: Unexpected characters at end of line
+ARM\IRQ.lst:    20 00000000     9 00000000         ;** Last Version: 1.1
+ARM\IRQ.lst:                    ^
+ARM\IRQ.lst(21): error: A1137E: Unexpected characters at end of line
+ARM\IRQ.lst:    21 00000000    10 00000000         ;** Descriptions: The irq handle that what allow the int
+ARM\IRQ.lst:                   ^
+ARM\IRQ.lst(22): error: A1163E: Unknown opcode errupt , expecting opcode or Macro
+ARM\IRQ.lst:    22 00000000                        errupt nesting. 
+ARM\IRQ.lst:                                       ^
+ARM\IRQ.lst(23): error: A1137E: Unexpected characters at end of line
+ARM\IRQ.lst:    23 00000000    11 00000000         ;**
+ARM\IRQ.lst:                   ^
+ARM\IRQ.lst(24): error: A1137E: Unexpected characters at end of line
+ARM\IRQ.lst:    24 00000000    12 00000000         ;**-----------------------------------------------------
+ARM\IRQ.lst:                   ^
+ARM\IRQ.lst(25): error: A1137E: Unexpected characters at end of line
+ARM\IRQ.lst:    25 00000000                        -------------------------------------------------
+ARM\IRQ.lst:                                       ^
+ARM\IRQ.lst(26): error: A1137E: Unexpected characters at end of line
+ARM\IRQ.lst:    26 00000000    13 00000000         ;** Created By: Chenmingji
+ARM\IRQ.lst:                   ^
+ARM\IRQ.lst(27): error: A1137E: Unexpected characters at end of line
+ARM\IRQ.lst:    27 00000000    14 00000000         ;** Created date:   2004-09-17
+ARM\IRQ.lst:                   ^
+ARM\IRQ.lst(28): error: A1137E: Unexpected characters at end of line
+ARM\IRQ.lst:    28 00000000    15 00000000         ;** Version: 1.0
+ARM\IRQ.lst:                   ^
+ARM\IRQ.lst(29): error: A1137E: Unexpected characters at end of line
+ARM\IRQ.lst:    29 00000000    16 00000000         ;** Descriptions: First version
+ARM\IRQ.lst:                   ^
+ARM\IRQ.lst(30): error: A1137E: Unexpected characters at end of line
+ARM\IRQ.lst:    30 00000000    17 00000000         ;**
+ARM\IRQ.lst:                   ^
+ARM\IRQ.lst(31): error: A1137E: Unexpected characters at end of line
+ARM\IRQ.lst:    31 00000000    18 00000000         ;**-----------------------------------------------------
+ARM\IRQ.lst:                   ^
+ARM\IRQ.lst(32): error: A1137E: Unexpected characters at end of line
+ARM\IRQ.lst:    32 00000000                        -------------------------------------------------
+ARM\IRQ.lst:                                       ^
+ARM\IRQ.lst(33): error: A1137E: Unexpected characters at end of line
+ARM\IRQ.lst:    33 00000000    19 00000000         ;** Modified by:
+ARM\IRQ.lst:                   ^
+ARM\IRQ.lst(34): error: A1137E: Unexpected characters at end of line
+ARM\IRQ.lst:    34 00000000    20 00000000         ;** Modified date:
+ARM\IRQ.lst:                   ^
+ARM\IRQ.lst(35): error: A1137E: Unexpected characters at end of line
+ARM\IRQ.lst:    35 00000000    21 00000000         ;** Version:
+ARM\IRQ.lst:                   ^
+ARM\IRQ.lst(36): error: A1137E: Unexpected characters at end of line
+ARM\IRQ.lst:    36 00000000    22 00000000         ;** Descriptions:
+ARM\IRQ.lst:                   ^
+ARM\IRQ.lst(37): error: A1137E: Unexpected characters at end of line
+ARM\IRQ.lst:    37 00000000    23 00000000         ;**
+ARM\IRQ.lst:                   ^
+ARM\IRQ.lst(38): error: A1137E: Unexpected characters at end of line
+ARM\IRQ.lst:    38 00000000    24 00000000         ;*******************************************************
+ARM\IRQ.lst:                   ^
+ARM\IRQ.lst(39): error: A1137E: Unexpected characters at end of line
+ARM\IRQ.lst:    39 00000000                        *************************************************/
+ARM\IRQ.lst:                                       ^
+ARM\IRQ.lst(40): error: A1137E: Unexpected characters at end of line
+ARM\IRQ.lst:    40 00000000    25 00000000         
+ARM\IRQ.lst:                   ^
+ARM\IRQ.lst(41): error: A1137E: Unexpected characters at end of line
+ARM\IRQ.lst:    41 00000000    26 00000000         
+ARM\IRQ.lst:                   ^
+ARM\IRQ.lst(42): error: A1137E: Unexpected characters at end of line
+ARM\IRQ.lst:    42 00000000    27 00000000                 INCLUDE          irq.inc     ; Inport the head f
+ARM\IRQ.lst:                   ^
+ARM\IRQ.lst(43): error: A1163E: Unknown opcode ile , expecting opcode or Macro
+ARM\IRQ.lst:    43 00000000                                                             ile ??????
+ARM\IRQ.lst:                                                                            ^
+ARM\IRQ.lst(44): error: A1137E: Unexpected characters at end of line
+ARM\IRQ.lst:    44 00000000     1 00000000         ;/****************************************Copyright (c)*
+ARM\IRQ.lst:                    ^
+ARM\IRQ.lst(45): error: A1137E: Unexpected characters at end of line
+ARM\IRQ.lst:    45 00000000                        *************************************************
+ARM\IRQ.lst:                                       ^
+ARM\IRQ.lst(46): error: A1137E: Unexpected characters at end of line
+ARM\IRQ.lst:    46 00000000     2 00000000         ;**                               1??b1|μ￥????
+ARM\IRQ.lst:                    ^
+ARM\IRQ.lst(47): error: A1137E: Unexpected characters at end of line
+ARM\IRQ.lst:    47 00000000                        ?1??
+ARM\IRQ.lst:                                       ^
+ARM\IRQ.lst(48): error: A1137E: Unexpected characters at end of line
+ARM\IRQ.lst:    48 00000000     3 00000000         ;**                                     ?    ??    ?
+ARM\IRQ.lst:                    ^
+ARM\IRQ.lst(49): error: A1137E: Unexpected characters at end of line
+ARM\IRQ.lst:    49 00000000     4 00000000         ;**                                        2?2? 
+ARM\IRQ.lst:                    ^
+ARM\IRQ.lst(50): error: A1137E: Unexpected characters at end of line
+ARM\IRQ.lst:    50 00000000     5 00000000         ;**
+ARM\IRQ.lst:                    ^
+ARM\IRQ.lst(51): error: A1137E: Unexpected characters at end of line
+ARM\IRQ.lst:    51 00000000     6 00000000         ;**                                 http://www.zlgmcu.co
+ARM\IRQ.lst:                    ^
+ARM\IRQ.lst(52): error: A1163E: Unknown opcode m , expecting opcode or Macro
+ARM\IRQ.lst:    52 00000000                        m
+ARM\IRQ.lst:                                       ^
+ARM\IRQ.lst(53): error: A1137E: Unexpected characters at end of line
+ARM\IRQ.lst:    53 00000000     7 00000000         ;**
+ARM\IRQ.lst:                    ^
+ARM\IRQ.lst(54): error: A1137E: Unexpected characters at end of line
+ARM\IRQ.lst:    54 00000000     8 00000000         ;**--------------???------------------------------
+ARM\IRQ.lst:                    ^
+ARM\IRQ.lst(55): error: A1137E: Unexpected characters at end of line
+ARM\IRQ.lst:    55 00000000                        -------------------------------------------------
+ARM\IRQ.lst:                                       ^
+ARM\IRQ.lst(56): error: A1137E: Unexpected characters at end of line
+ARM\IRQ.lst:    56 00000000     9 00000000         ;**?   ??: IRQ.inc
+ARM\IRQ.lst:                    ^
+ARM\IRQ.lst: 51 Errors, 0 Warnings
+Target not created
+Build target 'NMRQ_IEACS'
+assembling IRQ.s...
+linking...
+.\OutPut\NMRQ_IEACS.axf: Error: L6218E: Undefined symbol StackUsr (referred from irq.o).
+.\OutPut\NMRQ_IEACS.axf: Not enough information to list image symbols.
+.\OutPut\NMRQ_IEACS.axf: Finished: 1 information, 0 warning and 1 error messages.
+Target not created
+Build target 'NMRQ_IEACS'
+assembling IRQ.s...
+Target\IRQ.s(27): error: A1023E: File "irq.inc" could not be opened: No such file or directory
+  27 00000000       INCLUDE  irq.inc   ; Inport the head file ??????(40): error: A1163E: Unknown opcode HANDLER , expecting opcode or Macro
+  27 00000000       INCLUDE  irq.inc   ; Inport the head file ??????:    40 00000000 IRQ_Handler HANDLER IRQ_Exception
+  27 00000000       INCLUDE  irq.inc   ; Inport the head file ??????:                            ^
+Target\IRQ.s(45): error: A1163E: Unknown opcode HANDLER , expecting opcode or Macro
+Target\IRQ.s:    45 00000000 Timer0_Handler  HANDLER Timer0_Exception
+Target\IRQ.s:                                ^
+Target\IRQ.s: 3 Errors, 0 Warnings
+Target not created
+Build target 'NMRQ_IEACS'
+assembling IRQ.s...
+linking...
+.\OutPut\NMRQ_IEACS.axf: Error: L6218E: Undefined symbol StackUsr (referred from irq.o).
+.\OutPut\NMRQ_IEACS.axf: Not enough information to list image symbols.
+.\OutPut\NMRQ_IEACS.axf: Finished: 1 information, 0 warning and 1 error messages.
+Target not created
+Build target 'NMRQ_IEACS'
+assembling IRQ.s...
+Target\IRQ.s(27): error: A1023E: File ""..\Include\irq.inc"" could not be opened: Invalid argument
+  27 00000000       INCLUDE  (40): error: A1163E: Unknown opcode HANDLER , expecting opcode or Macro
+  27 00000000       INCLUDE  :    40 00000000 IRQ_Handler HANDLER IRQ_Exception
+  27 00000000       INCLUDE  :                            ^
+Target\IRQ.s(45): error: A1163E: Unknown opcode HANDLER , expecting opcode or Macro
+Target\IRQ.s:    45 00000000 Timer0_Handler  HANDLER Timer0_Exception
+Target\IRQ.s:                                ^
+Target\IRQ.s: 3 Errors, 0 Warnings
+Target not created
+Build target 'NMRQ_IEACS'
+assembling IRQ.s...
+Target\IRQ.s(27): error: A1355U: A Label was found which was in no AREA
+Target\IRQ.s:    27 00000000 INCLUDE  ..\Include\irq.inc   ; Inport the head file ??????1 Error, 0 Warnings
+Target not created
+Build target 'NMRQ_IEACS'
+assembling IRQ.s...
+linking...
+.\OutPut\NMRQ_IEACS.axf: Error: L6218E: Undefined symbol StackUsr (referred from irq.o).
+.\OutPut\NMRQ_IEACS.axf: Not enough information to list image symbols.
+.\OutPut\NMRQ_IEACS.axf: Finished: 1 information, 0 warning and 1 error messages.
+Target not created
+Build target 'NMRQ_IEACS'
+assembling IRQ.s...
+linking...
+.\OutPut\NMRQ_IEACS.axf: Error: L6218E: Undefined symbol StackUsr (referred from irq.o).
+.\OutPut\NMRQ_IEACS.axf: Not enough information to list image symbols.
+.\OutPut\NMRQ_IEACS.axf: Finished: 1 information, 0 warning and 1 error messages.
+Target not created
+Build target 'NMRQ_IEACS'
+compiling Os_cpu_c.c...
+ARM\Os_cpu_c.c(47): error:  #5: cannot open source input file "config.h": No such file or directory
+ARM\Os_cpu_c.c:   #include "config.h"
+ARM\Os_cpu_c.c:                      ^
+ARM\Os_cpu_c.c: ARM\Os_cpu_c.c: 0 warnings, 1 error
+compiling OS_CORE.C...
+UcosII\OS_CORE.C(68): warning:  #177-D: function "OS_InitTaskStat" was declared but never referenced
+UcosII\OS_CORE.C:   static  void  OS_InitTaskStat(void);
+UcosII\OS_CORE.C:                 ^
+UcosII\OS_CORE.C: UcosII\OS_CORE.C: 1 warning, 0 errors
+compiling OS_FLAG.C...
+compiling OS_MBOX.C...
+compiling OS_MEM.C...
+compiling OS_MUTEX.C...
+compiling OS_Q.C...
+compiling OS_SEM.C...
+compiling OS_TASK.C...
+compiling OS_TIME.C...
+compiling helper.c...
+compiling main.c...
+compiling Target.c...
+Target\Target.c(125): warning:  #69-D: integer conversion resulted in truncation
+Target\Target.c:       T0IR = 0xffffffff;
+Target\Target.c:              ^
+Target\Target.c(319): warning:  #69-D: integer conversion resulted in truncation
+Target\Target.c:       T0IR = 0xffffffff;
+Target\Target.c:              ^
+Target\Target.c: Target\Target.c: 2 warnings, 0 errors
+compiling LCD12864.c...
+Driver\LCD12864.c(411): warning:  #1-D: last line of file ends without a newline
+Driver\LCD12864.c:   //////////////////////////////////////////////////////////////////////////////
+Driver\LCD12864.c:                                                                                 ^
+Driver\LCD12864.c: Driver\LCD12864.c: 1 warning, 0 errors
+compiling Lcd240160.c...
+compiling uart.c...
+Target not created
+Build target 'NMRQ_IEACS'
+compiling Os_cpu_c.c...
+ARM\Os_cpu_c.c(141): warning:  #1267-D: Implicit physical register R0 should be defined as a variable
+ARM\Os_cpu_c.c:                   MRS     R0, SPSR
+ARM\Os_cpu_c.c:                           ^
+ARM\Os_cpu_c.c: ARM\Os_cpu_c.c: 1 warning, 0 errors
+linking...
+.\OutPut\NMRQ_IEACS.axf: Error: L6218E: Undefined symbol StackUsr (referred from irq.o).
+.\OutPut\NMRQ_IEACS.axf: Not enough information to list image symbols.
+.\OutPut\NMRQ_IEACS.axf: Finished: 1 information, 0 warning and 1 error messages.
+Target not created
+Build target 'NMRQ_IEACS'
+linking...
+.\OutPut\NMRQ_IEACS.axf: Error: L6218E: Undefined symbol StackUsr (referred from irq.o).
+.\OutPut\NMRQ_IEACS.axf: Not enough information to list image symbols.
+.\OutPut\NMRQ_IEACS.axf: Finished: 1 information, 0 warning and 1 error messages.
+Target not created
+Build target 'NMRQ_IEACS'
+assembling Startup.s...
+Startup.s(164): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+Startup.s:   164 00000088         MOV     PC, R0
+Startup.s(207): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+Startup.s:   207 0000009c     MOV   pc,lr    
+Startup.s: 0 Errors, 2 Warnings
+assembling Os_cpu_a.s...
+ARM\Os_cpu_a.s(152): warning: A1876W: Use of '|' as a synonym for the :OR: operator is deprecated.
+ARM\Os_cpu_a.s:   152 00000048         MSR     CPSR_c, #(NoInt | SYS32Mode)
+ARM\Os_cpu_a.s: 0 Errors, 1 Warning
+compiling Os_cpu_c.c...
+ARM\Os_cpu_c.c(141): warning:  #1267-D: Implicit physical register R0 should be defined as a variable
+ARM\Os_cpu_c.c:                   MRS     R0, SPSR
+ARM\Os_cpu_c.c:                           ^
+ARM\Os_cpu_c.c: ARM\Os_cpu_c.c: 1 warning, 0 errors
+compiling OS_CORE.C...
+UcosII\OS_CORE.C(68): warning:  #177-D: function "OS_InitTaskStat" was declared but never referenced
+UcosII\OS_CORE.C:   static  void  OS_InitTaskStat(void);
+UcosII\OS_CORE.C:                 ^
+UcosII\OS_CORE.C: UcosII\OS_CORE.C: 1 warning, 0 errors
+compiling OS_FLAG.C...
+compiling OS_MBOX.C...
+compiling OS_MEM.C...
+compiling OS_MUTEX.C...
+compiling OS_Q.C...
+compiling OS_SEM.C...
+compiling OS_TASK.C...
+compiling OS_TIME.C...
+compiling helper.c...
+compiling main.c...
+compiling Target.c...
+Target\Target.c(125): warning:  #69-D: integer conversion resulted in truncation
+Target\Target.c:       T0IR = 0xffffffff;
+Target\Target.c:              ^
+Target\Target.c(319): warning:  #69-D: integer conversion resulted in truncation
+Target\Target.c:       T0IR = 0xffffffff;
+Target\Target.c:              ^
+Target\Target.c: Target\Target.c: 2 warnings, 0 errors
+assembling IRQ.s...
+compiling LCD12864.c...
+Driver\LCD12864.c(411): warning:  #1-D: last line of file ends without a newline
+Driver\LCD12864.c:   //////////////////////////////////////////////////////////////////////////////
+Driver\LCD12864.c:                                                                                 ^
+Driver\LCD12864.c: Driver\LCD12864.c: 1 warning, 0 errors
+compiling Lcd240160.c...
+compiling uart.c...
+linking...
+.\OutPut\NMRQ_IEACS.axf: Error: L6238E: os_cpu_a.o(subr) contains invalid call from '~PRES8 (The user did not require code to preserve 8-byte aligment of 8-byte data objects)' function to 'REQ8 (Code was permitted to depend on the 8-byte aligment of 8-byte data items)' function SWI_Exception.
+.\OutPut\NMRQ_IEACS.axf: Error: L6238E: os_cpu_a.o(subr) contains invalid call from '~PRES8 (The user did not require code to preserve 8-byte aligment of 8-byte data objects)' function to 'REQ8 (Code was permitted to depend on the 8-byte aligment of 8-byte data items)' function OSTaskSwHook.
+.\OutPut\NMRQ_IEACS.axf: Error: L6238E: os_cpu_a.o(subr) contains invalid call from '~PRES8 (The user did not require code to preserve 8-byte aligment of 8-byte data objects)' function to 'REQ8 (Code was permitted to depend on the 8-byte aligment of 8-byte data items)' function OSTaskSwHook.
+.\OutPut\NMRQ_IEACS.axf: Finished: 0 information, 0 warning and 3 error messages.
+Target not created
+Build target 'NMRQ_IEACS'
+assembling Startup.s...
+Startup.s(164): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+Startup.s:   164 00000088         MOV     PC, R0
+Startup.s(207): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+Startup.s:   207 0000009c     MOV   pc,lr    
+Startup.s: 0 Errors, 2 Warnings
+assembling Os_cpu_a.s...
+ARM\Os_cpu_a.s(154): warning: A1876W: Use of '|' as a synonym for the :OR: operator is deprecated.
+ARM\Os_cpu_a.s:   154 00000048         MSR     CPSR_c, #(NoInt | SYS32Mode)
+ARM\Os_cpu_a.s: 0 Errors, 1 Warning
+compiling Os_cpu_c.c...
+ARM\Os_cpu_c.c(141): warning:  #1267-D: Implicit physical register R0 should be defined as a variable
+ARM\Os_cpu_c.c:                   MRS     R0, SPSR
+ARM\Os_cpu_c.c:                           ^
+ARM\Os_cpu_c.c: ARM\Os_cpu_c.c: 1 warning, 0 errors
+compiling OS_CORE.C...
+UcosII\OS_CORE.C(68): warning:  #177-D: function "OS_InitTaskStat" was declared but never referenced
+UcosII\OS_CORE.C:   static  void  OS_InitTaskStat(void);
+UcosII\OS_CORE.C:                 ^
+UcosII\OS_CORE.C: UcosII\OS_CORE.C: 1 warning, 0 errors
+compiling OS_FLAG.C...
+compiling OS_MBOX.C...
+compiling OS_MEM.C...
+compiling OS_MUTEX.C...
+compiling OS_Q.C...
+compiling OS_SEM.C...
+compiling OS_TASK.C...
+compiling OS_TIME.C...
+compiling helper.c...
+compiling main.c...
+compiling Target.c...
+Target\Target.c(125): warning:  #69-D: integer conversion resulted in truncation
+Target\Target.c:       T0IR = 0xffffffff;
+Target\Target.c:              ^
+Target\Target.c(319): warning:  #69-D: integer conversion resulted in truncation
+Target\Target.c:       T0IR = 0xffffffff;
+Target\Target.c:              ^
+Target\Target.c: Target\Target.c: 2 warnings, 0 errors
+assembling IRQ.s...
+compiling LCD12864.c...
+Driver\LCD12864.c(411): warning:  #1-D: last line of file ends without a newline
+Driver\LCD12864.c:   //////////////////////////////////////////////////////////////////////////////
+Driver\LCD12864.c:                                                                                 ^
+Driver\LCD12864.c: Driver\LCD12864.c: 1 warning, 0 errors
+compiling Lcd240160.c...
+compiling uart.c...
+linking...
+Program Size: Code=15760 RO-data=296 RW-data=64 ZI-data=5756  
+FromELF: creating hex file...
+".\OutPut\NMRQ_IEACS.axf" - 0 Error(s), 8 Warning(s).
+Build target 'NMRQ_IEACS'
+assembling Startup.s...
+Startup.s(164): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+Startup.s:   164 00000088         MOV     PC, R0
+Startup.s(207): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+Startup.s:   207 0000009c     MOV   pc,lr    
+Startup.s: 0 Errors, 2 Warnings
+assembling Os_cpu_a.s...
+compiling Os_cpu_c.c...
+ARM\Os_cpu_c.c(141): warning:  #1267-D: Implicit physical register R0 should be defined as a variable
+ARM\Os_cpu_c.c:                   MRS     R0, SPSR
+ARM\Os_cpu_c.c:                           ^
+ARM\Os_cpu_c.c: ARM\Os_cpu_c.c: 1 warning, 0 errors
+compiling OS_CORE.C...
+UcosII\OS_CORE.C(68): warning:  #177-D: function "OS_InitTaskStat" was declared but never referenced
+UcosII\OS_CORE.C:   static  void  OS_InitTaskStat(void);
+UcosII\OS_CORE.C:                 ^
+UcosII\OS_CORE.C: UcosII\OS_CORE.C: 1 warning, 0 errors
+compiling OS_FLAG.C...
+compiling OS_MBOX.C...
+compiling OS_MEM.C...
+compiling OS_MUTEX.C...
+compiling OS_Q.C...
+compiling OS_SEM.C...
+compiling OS_TASK.C...
+compiling OS_TIME.C...
+compiling helper.c...
+compiling main.c...
+compiling Target.c...
+Target\Target.c(125): warning:  #69-D: integer conversion resulted in truncation
+Target\Target.c:       T0IR = 0xffffffff;
+Target\Target.c:              ^
+Target\Target.c(319): warning:  #69-D: integer conversion resulted in truncation
+Target\Target.c:       T0IR = 0xffffffff;
+Target\Target.c:              ^
+Target\Target.c: Target\Target.c: 2 warnings, 0 errors
+assembling IRQ.s...
+compiling LCD12864.c...
+Driver\LCD12864.c(411): warning:  #1-D: last line of file ends without a newline
+Driver\LCD12864.c:   //////////////////////////////////////////////////////////////////////////////
+Driver\LCD12864.c:                                                                                 ^
+Driver\LCD12864.c: Driver\LCD12864.c: 1 warning, 0 errors
+compiling Lcd240160.c...
+compiling uart.c...
+linking...
+Program Size: Code=15760 RO-data=296 RW-data=64 ZI-data=5756  
+FromELF: creating hex file...
+".\OutPut\NMRQ_IEACS.axf" - 0 Error(s), 7 Warning(s).
+Build target 'NMRQ_IEACS'
+assembling Startup.s...
+Startup.s(164): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+Startup.s:   164 00000088         MOV     PC, R0
+Startup.s(207): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+Startup.s:   207 0000009c     MOV   pc,lr    
+Startup.s: 0 Errors, 2 Warnings
+assembling Os_cpu_a.s...
+compiling Os_cpu_c.c...
+ARM\Os_cpu_c.c(141): warning:  #1267-D: Implicit physical register R0 should be defined as a variable
+ARM\Os_cpu_c.c:                   MRS     R0, SPSR
+ARM\Os_cpu_c.c:                           ^
+ARM\Os_cpu_c.c: ARM\Os_cpu_c.c: 1 warning, 0 errors
+compiling OS_CORE.C...
+UcosII\OS_CORE.C(68): warning:  #177-D: function "OS_InitTaskStat" was declared but never referenced
+UcosII\OS_CORE.C:   static  void  OS_InitTaskStat(void);
+UcosII\OS_CORE.C:                 ^
+UcosII\OS_CORE.C: UcosII\OS_CORE.C: 1 warning, 0 errors
+compiling OS_FLAG.C...
+compiling OS_MBOX.C...
+compiling OS_MEM.C...
+compiling OS_MUTEX.C...
+compiling OS_Q.C...
+compiling OS_SEM.C...
+compiling OS_TASK.C...
+compiling OS_TIME.C...
+compiling helper.c...
+compiling main.c...
+compiling Target.c...
+Target\Target.c(125): warning:  #69-D: integer conversion resulted in truncation
+Target\Target.c:       T0IR = 0xffffffff;
+Target\Target.c:              ^
+Target\Target.c(319): warning:  #69-D: integer conversion resulted in truncation
+Target\Target.c:       T0IR = 0xffffffff;
+Target\Target.c:              ^
+Target\Target.c: Target\Target.c: 2 warnings, 0 errors
+assembling IRQ.s...
+compiling LCD12864.c...
+compiling Lcd240160.c...
+compiling uart.c...
+linking...
+Program Size: Code=15760 RO-data=296 RW-data=64 ZI-data=5756  
+FromELF: creating hex file...
+".\OutPut\NMRQ_IEACS.axf" - 0 Error(s), 6 Warning(s).
+"LPC210x_ISP.EXE" "C:\Documents and Settings\Administrator\桌面\NMRQ_IEACS\OutPut\NMRQ_IEACS.HEX" 12000 LPC2103 COM1: 9600 1
+--- Error: failed to execute '"LPC210x_ISP.EXE" "C:\Documents and Settings\Administrator\桌面\NMRQ_IEACS\OutPut\NMRQ_IEACS.HEX" 12000 LPC2103 COM1: 9600 1'
+Build target 'NMRQ_IEACS'
+assembling Startup.s...
+Startup.s(164): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+Startup.s:   164 00000088         MOV     PC, R0
+Startup.s(207): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+Startup.s:   207 0000009c     MOV   pc,lr    
+Startup.s: 0 Errors, 2 Warnings
+assembling Os_cpu_a.s...
+compiling Os_cpu_c.c...
+ARM\Os_cpu_c.c(141): warning:  #1267-D: Implicit physical register R0 should be defined as a variable
+ARM\Os_cpu_c.c:                   MRS     R0, SPSR
+ARM\Os_cpu_c.c:                           ^
+ARM\Os_cpu_c.c: ARM\Os_cpu_c.c: 1 warning, 0 errors
+compiling OS_CORE.C...
+UcosII\OS_CORE.C(68): warning:  #177-D: function "OS_InitTaskStat" was declared but never referenced
+UcosII\OS_CORE.C:   static  void  OS_InitTaskStat(void);
+UcosII\OS_CORE.C:                 ^
+UcosII\OS_CORE.C: UcosII\OS_CORE.C: 1 warning, 0 errors
+compiling OS_FLAG.C...
+compiling OS_MBOX.C...
+compiling OS_MEM.C...
+compiling OS_MUTEX.C...
+compiling OS_Q.C...
+compiling OS_SEM.C...
+compiling OS_TASK.C...
+compiling OS_TIME.C...
+compiling helper.c...
+compiling main.c...
+compiling Target.c...
+Target\Target.c(125): warning:  #69-D: integer conversion resulted in truncation
+Target\Target.c:       T0IR = 0xffffffff;
+Target\Target.c:              ^
+Target\Target.c(319): warning:  #69-D: integer conversion resulted in truncation
+Target\Target.c:       T0IR = 0xffffffff;
+Target\Target.c:              ^
+Target\Target.c: Target\Target.c: 2 warnings, 0 errors
+assembling IRQ.s...
+compiling LCD12864.c...
+compiling Lcd240160.c...
+compiling uart.c...
+linking...
+Program Size: Code=15760 RO-data=296 RW-data=64 ZI-data=5756  
+FromELF: creating hex file...
+".\OutPut\NMRQ_IEACS.axf" - 0 Error(s), 6 Warning(s).
+"LPC210x_ISP.EXE" "C:\Documents and Settings\Administrator\桌面\NMRQ_IEACS\OutPut\NMRQ_IEACS.HEX" 12000 LPC2103 COM1: 9600 1
+--- Error: failed to execute '"LPC210x_ISP.EXE" "C:\Documents and Settings\Administrator\桌面\NMRQ_IEACS\OutPut\NMRQ_IEACS.HEX" 12000 LPC2103 COM1: 9600 1'
+Build target 'NMRQ_IEACS'
+assembling Startup.s...
+Startup.s(164): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+Startup.s:   164 00000088         MOV     PC, R0
+Startup.s(207): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+Startup.s:   207 0000009c     MOV   pc,lr    
+Startup.s: 0 Errors, 2 Warnings
+assembling Os_cpu_a.s...
+compiling Os_cpu_c.c...
+ARM\Os_cpu_c.c(141): warning:  #1267-D: Implicit physical register R0 should be defined as a variable
+ARM\Os_cpu_c.c:                   MRS     R0, SPSR
+ARM\Os_cpu_c.c:                           ^
+ARM\Os_cpu_c.c: ARM\Os_cpu_c.c: 1 warning, 0 errors
+compiling OS_CORE.C...
+UcosII\OS_CORE.C(68): warning:  #177-D: function "OS_InitTaskStat" was declared but never referenced
+UcosII\OS_CORE.C:   static  void  OS_InitTaskStat(void);
+UcosII\OS_CORE.C:                 ^
+UcosII\OS_CORE.C: UcosII\OS_CORE.C: 1 warning, 0 errors
+compiling OS_FLAG.C...
+compiling OS_MBOX.C...
+compiling OS_MEM.C...
+compiling OS_MUTEX.C...
+compiling OS_Q.C...
+compiling OS_SEM.C...
+compiling OS_TASK.C...
+compiling OS_TIME.C...
+compiling helper.c...
+compiling main.c...
+compiling Target.c...
+Target\Target.c(125): warning:  #69-D: integer conversion resulted in truncation
+Target\Target.c:       T0IR = 0xffffffff;
+Target\Target.c:              ^
+Target\Target.c(319): warning:  #69-D: integer conversion resulted in truncation
+Target\Target.c:       T0IR = 0xffffffff;
+Target\Target.c:              ^
+Target\Target.c: Target\Target.c: 2 warnings, 0 errors
+assembling IRQ.s...
+compiling LCD12864.c...
+compiling Lcd240160.c...
+compiling uart.c...
+linking...
+Program Size: Code=15760 RO-data=296 RW-data=64 ZI-data=5756  
+FromELF: creating hex file...
+".\OutPut\debug_in_rom.axf" - 0 Error(s), 6 Warning(s).
+"LPC210x_ISP.EXE" "C:\Documents and Settings\Administrator\桌面\NMRQ_IEACS\OutPut\debug_in_rom.HEX" 12000 LPC2103 COM1: 9600 1
+--- Error: failed to execute '"LPC210x_ISP.EXE" "C:\Documents and Settings\Administrator\桌面\NMRQ_IEACS\OutPut\debug_in_rom.HEX" 12000 LPC2103 COM1: 9600 1'
+Build target 'NMRQ_IEACS'
+assembling Startup.s...
+Startup.s(164): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+Startup.s:   164 00000088         MOV     PC, R0
+Startup.s(207): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+Startup.s:   207 0000009c     MOV   pc,lr    
+Startup.s: 0 Errors, 2 Warnings
+assembling Os_cpu_a.s...
+compiling Os_cpu_c.c...
+ARM\Os_cpu_c.c(141): warning:  #1267-D: Implicit physical register R0 should be defined as a variable
+ARM\Os_cpu_c.c:                   MRS     R0, SPSR
+ARM\Os_cpu_c.c:                           ^
+ARM\Os_cpu_c.c: ARM\Os_cpu_c.c: 1 warning, 0 errors
+compiling OS_CORE.C...
+UcosII\OS_CORE.C(68): warning:  #177-D: function "OS_InitTaskStat" was declared but never referenced
+UcosII\OS_CORE.C:   static  void  OS_InitTaskStat(void);
+UcosII\OS_CORE.C:                 ^
+UcosII\OS_CORE.C: UcosII\OS_CORE.C: 1 warning, 0 errors
+compiling OS_FLAG.C...
+compiling OS_MBOX.C...
+compiling OS_MEM.C...
+compiling OS_MUTEX.C...
+compiling OS_Q.C...
+compiling OS_SEM.C...
+compiling OS_TASK.C...
+compiling OS_TIME.C...
+compiling helper.c...
+compiling main.c...
+compiling Target.c...
+Target\Target.c(125): warning:  #69-D: integer conversion resulted in truncation
+Target\Target.c:       T0IR = 0xffffffff;
+Target\Target.c:              ^
+Target\Target.c(319): warning:  #69-D: integer conversion resulted in truncation
+Target\Target.c:       T0IR = 0xffffffff;
+Target\Target.c:              ^
+Target\Target.c: Target\Target.c: 2 warnings, 0 errors
+assembling IRQ.s...
+compiling LCD12864.c...
+compiling Lcd240160.c...
+compiling uart.c...
+linking...
+.\OutPut\debug_in_rom.axf: error: L6031U: Could not open scatter description file .\OutPut\debug_in_rom.sct: No such file or directory
+.\OutPut\debug_in_rom.axf: Not enough information to list image symbols.
+.\OutPut\debug_in_rom.axf: Not enough information to list the image map.
+.\OutPut\debug_in_rom.axf: Finished: 2 information, 0 warning, 0 error and 1 fatal error messages.
+Target not created
+Build target 'NMRQ_IEACS'
+assembling Startup.s...
+Startup.s(164): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+Startup.s:   164 00000088         MOV     PC, R0
+Startup.s(207): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+Startup.s:   207 0000009c     MOV   pc,lr    
+Startup.s: 0 Errors, 2 Warnings
+assembling Os_cpu_a.s...
+compiling Os_cpu_c.c...
+ARM\Os_cpu_c.c(141): warning:  #1267-D: Implicit physical register R0 should be defined as a variable
+ARM\Os_cpu_c.c:                   MRS     R0, SPSR
+ARM\Os_cpu_c.c:                           ^
+ARM\Os_cpu_c.c: ARM\Os_cpu_c.c: 1 warning, 0 errors
+compiling OS_CORE.C...
+UcosII\OS_CORE.C(68): warning:  #177-D: function "OS_InitTaskStat" was declared but never referenced
+UcosII\OS_CORE.C:   static  void  OS_InitTaskStat(void);
+UcosII\OS_CORE.C:                 ^
+UcosII\OS_CORE.C: UcosII\OS_CORE.C: 1 warning, 0 errors
+compiling OS_FLAG.C...
+compiling OS_MBOX.C...
+compiling OS_MEM.C...
+compiling OS_MUTEX.C...
+compiling OS_Q.C...
+compiling OS_SEM.C...
+compiling OS_TASK.C...
+compiling OS_TIME.C...
+compiling helper.c...
+compiling main.c...
+compiling Target.c...
+Target\Target.c(125): warning:  #69-D: integer conversion resulted in truncation
+Target\Target.c:       T0IR = 0xffffffff;
+Target\Target.c:              ^
+Target\Target.c(319): warning:  #69-D: integer conversion resulted in truncation
+Target\Target.c:       T0IR = 0xffffffff;
+Target\Target.c:              ^
+Target\Target.c: Target\Target.c: 2 warnings, 0 errors
+assembling IRQ.s...
+compiling LCD12864.c...
+compiling Lcd240160.c...
+compiling uart.c...
+linking...
+Program Size: Code=15760 RO-data=296 RW-data=64 ZI-data=5756  
+FromELF: creating hex file...
+".\OutPut\debug_in_rom.axf" - 0 Error(s), 6 Warning(s).

@@ -1,0 +1,766 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         ;/****************************************Copyright (c)*
+                       *************************************************
+    2 00000000         ;**                                ÄÏÂùÈëÇÖ¿ª·¢×é
+    3 00000000         ;**
+    4 00000000         ;**--------------File Info------------------------------
+                       -------------------------------------------------
+    5 00000000         ;** File name:    Startup.s
+    6 00000000         ;** Last modified Date:  2004-09-17
+    7 00000000         ;** Last Version:   1.0
+    8 00000000         ;** Descriptions:   The start up codes for LPC2100, incl
+                       uding the initializing codes for the entry point of exce
+                       ptions and the stacks of user tasks.
+    9 00000000         ;**    Every project should have a independent copy of t
+                       his file for related modifications
+   10 00000000         ;**-----------------------------------------------------
+                       -------------------------------------------------
+   11 00000000         ;*******************************************************
+                       *************************************************/
+   12 00000000         
+   13 00000000         ;define the stack size
+   14 00000000         ;¶¨Òå¶ÑÕ»µÄ´óÐ¡
+   15 00000000 00000000 
+                       FIQ_STACK_LEGTH
+                               EQU              0
+   16 00000000 00000048 
+                       IRQ_STACK_LEGTH
+                               EQU              9*8         ;every layer need 9
+                                                             bytes stack , perm
+                                                            it 8 layer .Ã¿²ãÇ¶Ì
+                                                            ×ÐèÒª9¸ö×Ö¶ÑÕ»£¬ÔÊÐ
+                                                            í8²ãÇ¶Ì×
+   17 00000000 00000000 
+                       ABT_STACK_LEGTH
+                               EQU              0
+   18 00000000 00000000 
+                       UND_STACK_LEGTH
+                               EQU              0
+   19 00000000         
+   20 00000000 00000080 
+                       NoInt   EQU              0x80
+   21 00000000         
+   22 00000000 00000010 
+                       USR32Mode
+                               EQU              0x10
+   23 00000000 00000013 
+                       SVC32Mode
+                               EQU              0x13
+   24 00000000 0000001F 
+                       SYS32Mode
+                               EQU              0x1f
+   25 00000000 00000012 
+                       IRQ32Mode
+                               EQU              0x12
+   26 00000000 00000011 
+                       FIQ32Mode
+                               EQU              0x11
+   27 00000000         
+   28 00000000                 IMPORT           __use_no_semihosting_swi
+   29 00000000         
+
+
+
+ARM Macro Assembler    Page 2 
+
+
+   30 00000000         ;The imported labels    
+   31 00000000         ;ÒýÈëµÄÍâ²¿±êºÅÔÚÕâÉùÃ÷
+   32 00000000                 IMPORT           FIQ_Exception ;Fast interrupt e
+                                                            xceptions handler ¿
+                                                            ìËÙÖÐ¶ÏÒì³£´¦Àí³ÌÐò
+                                                            
+   33 00000000                 IMPORT           __main      ;The entry point to
+                                                             the main function 
+                                                            CÓïÑÔÖ÷³ÌÐòÈë¿Ú 
+   34 00000000                 IMPORT           TargetResetInit ;initialize the
+                                                             target board Ä¿±ê°
+                                                            å»ù±¾³õÊ¼»¯
+   35 00000000                 IMPORT           SoftwareInterrupt
+   36 00000000         
+   37 00000000         ;The emported labels    
+   38 00000000         ;¸øÍâ²¿Ê¹ÓÃµÄ±êºÅÔÚÕâÉùÃ÷
+   39 00000000                 EXPORT           bottom_of_heap
+   40 00000000                 EXPORT           StackUsr
+   41 00000000         
+   42 00000000                 EXPORT           Reset
+   43 00000000                 EXPORT           __user_initial_stackheap
+   44 00000000         
+   45 00000000                 CODE32
+   46 00000000         
+   47 00000000                 PRESERVE8
+   48 00000000         
+   49 00000000                 AREA             vectors,CODE,READONLY
+   50 00000000                 ENTRY
+   51 00000000         
+   52 00000000         ;interrupt vectors
+   53 00000000         ;ÖÐ¶ÏÏòÁ¿±í
+   54 00000000         Reset
+   55 00000000 E59FF018        LDR              PC, ResetAddr
+   56 00000004 E59FF018        LDR              PC, UndefinedAddr
+   57 00000008 E59FF018        LDR              PC, SWI_Addr
+   58 0000000C E59FF018        LDR              PC, PrefetchAddr
+   59 00000010 E59FF018        LDR              PC, DataAbortAddr
+   60 00000014 B9205F80        DCD              0xb9205f80
+   61 00000018 E51FFFF0        LDR              PC, [PC, #-0xff0]
+   62 0000001C E59FF018        LDR              PC, FIQ_Addr
+   63 00000020         
+   64 00000020         
+   65 00000020         
+   66 00000020 00000000 
+                       ResetAddr
+                               DCD              ResetInit
+   67 00000024 00000000 
+                       UndefinedAddr
+                               DCD              Undefined
+   68 00000028 00000000 
+                       SWI_Addr
+                               DCD              SoftwareInterrupt
+   69 0000002C 00000000 
+                       PrefetchAddr
+                               DCD              PrefetchAbort
+   70 00000030 00000000 
+                       DataAbortAddr
+                               DCD              DataAbort
+   71 00000034 00000000 
+
+
+
+ARM Macro Assembler    Page 3 
+
+
+                       Nouse   DCD              0
+   72 00000038 00000000 
+                       IRQ_Addr
+                               DCD              0
+   73 0000003C 00000000 
+                       FIQ_Addr
+                               DCD              FIQ_Handler
+   74 00000040         
+   75 00000040         ;Î´¶¨ÒåÖ¸Áî
+   76 00000040         Undefined
+   77 00000040 EAFFFFFE        B                Undefined
+   78 00000044         
+   79 00000044         ;È¡Ö¸ÁîÖÐÖ¹
+   80 00000044         PrefetchAbort
+   81 00000044 EAFFFFFE        B                PrefetchAbort
+   82 00000048         
+   83 00000048         ;È¡Êý¾ÝÖÐÖ¹
+   84 00000048         DataAbort
+   85 00000048 EAFFFFFE        B                DataAbort
+   86 0000004C         
+   87 0000004C         ;¿ìËÙÖÐ¶Ï
+   88 0000004C         FIQ_Handler
+   89 0000004C E92D400F        STMFD            SP!, {R0-R3, LR}
+   90 00000050 EBFFFFFE        BL               FIQ_Exception
+   91 00000054 E8BD400F        LDMFD            SP!, {R0-R3, LR}
+   92 00000058 E25EF004        SUBS             PC,  LR,  #4
+   93 0000005C         
+   94 0000005C         ;/******************************************************
+                       ***************************************************
+   95 0000005C         ;** unction name  º¯ÊýÃû³Æ:  InitStack
+   96 0000005C         ;** Descriptions  ¹¦ÄÜÃèÊö:  Initialize the stacks  ³õÊ¼
+                       »¯¶ÑÕ»
+   97 0000005C         ;** input parameters  Êä¡¡Èë:    None ÎÞ
+   98 0000005C         ;** Returned value    Êä¡¡³ö :   None ÎÞ
+   99 0000005C         ;** Used global variables È«¾Ö±äÁ¿:  None ÎÞ
+  100 0000005C         ;** Calling modules  µ÷ÓÃÄ£¿é:  None ÎÞ
+  101 0000005C         ;** 
+  102 0000005C         ;**-----------------------------------------------------
+                       --------------------------------------------------
+  103 0000005C         ;*******************************************************
+                       *************************************************/
+  104 0000005C         InitStack
+  105 0000005C E1A0000E        MOV              R0, LR
+  106 00000060         
+  107 00000060         ;Build the SVC stack
+  108 00000060         ;ÉèÖÃÖÐ¶ÏÄ£Ê½¶ÑÕ»
+  109 00000060 E321F0D2        MSR              CPSR_c, #0xd2
+  110 00000064 E59FD034        LDR              SP, StackIrq
+  111 00000068         ;Build the FIQ stack 
+  112 00000068         ;ÉèÖÃ¿ìËÙÖÐ¶ÏÄ£Ê½¶ÑÕ»
+  113 00000068 E321F0D1        MSR              CPSR_c, #0xd1
+  114 0000006C E59FD030        LDR              SP, StackFiq
+  115 00000070         ;Build the DATAABORT stack
+  116 00000070         ;ÉèÖÃÖÐÖ¹Ä£Ê½¶ÑÕ»
+  117 00000070 E321F0D7        MSR              CPSR_c, #0xd7
+  118 00000074 E59FD02C        LDR              SP, StackAbt
+  119 00000078         ;Build the UDF stack
+  120 00000078         ;ÉèÖÃÎ´¶¨ÒåÄ£Ê½¶ÑÕ»
+  121 00000078 E321F0DB        MSR              CPSR_c, #0xdb
+
+
+
+ARM Macro Assembler    Page 4 
+
+
+  122 0000007C E59FD028        LDR              SP, StackUnd
+  123 00000080         ;Build the SYS stack
+  124 00000080         ;ÉèÖÃÏµÍ³Ä£Ê½¶ÑÕ»
+  125 00000080 E321F0DF        MSR              CPSR_c, #0xdf
+  126 00000084 E59FD024        LDR              SP, =StackUsr
+  127 00000088         
+  128 00000088 E1A0F000        MOV              PC, R0
+  129 0000008C         
+  130 0000008C         ;/******************************************************
+                       ***************************************************
+  131 0000008C         ;** unction name  º¯ÊýÃû³Æ:  ResetInit
+  132 0000008C         ;** Descriptions  ¹¦ÄÜÃèÊö:  RESET  ¸´Î»Èë¿Ú
+  133 0000008C         ;** input parameters  Êä¡¡Èë:    None ÎÞ
+  134 0000008C         ;** Returned value    Êä¡¡³ö :   None ÎÞ
+  135 0000008C         ;** Used global variables È«¾Ö±äÁ¿:  None ÎÞ
+  136 0000008C         ;** Calling modules  µ÷ÓÃÄ£¿é:  None ÎÞ
+  137 0000008C         ;** 
+  138 0000008C         ;**-----------------------------------------------------
+                       --------------------------------------------------
+  139 0000008C         ;*******************************************************
+                       *************************************************/
+  140 0000008C         ResetInit
+  141 0000008C         
+  142 0000008C EBFFFFF2        BL               InitStack   ; Initialize the st
+                                                            ack ³õÊ¼»¯¶ÑÕ»
+  143 00000090 EBFFFFFE        BL               TargetResetInit ; Initialize th
+                                                            e target board Ä¿±ê
+                                                            °å»ù±¾³õÊ¼»¯
+  144 00000094         ; Jump to the entry point of C program Ìø×ªµ½cÓïÑÔÈë¿Ú
+  145 00000094 EAFFFFFE        B                __main
+  146 00000098         
+  147 00000098         
+  148 00000098         ;/******************************************************
+                       ***************************************************
+  149 00000098         ;** unction name  º¯ÊýÃû³Æ:  __user_initial_stackheap
+  150 00000098         ;** Descriptions  ¹¦ÄÜÃèÊö:  Initial the function librar
+                       y stacks and heaps, can not deleted!   ¿âº¯Êý³õÊ¼»¯¶ÑºÍÕ
+                       »£¬²»ÄÜÉ¾³ý
+  151 00000098         ;** input parameters  Êä¡¡Èë:    reference by function l
+                       ibrary ²Î¿¼¿âº¯ÊýÊÖ²á
+  152 00000098         ;** Returned value    Êä¡¡³ö :   reference by function l
+                       ibrary ²Î¿¼¿âº¯ÊýÊÖ²á
+  153 00000098         ;** Used global variables È«¾Ö±äÁ¿:  None ÎÞ
+  154 00000098         ;** Calling modules  µ÷ÓÃÄ£¿é:  None ÎÞ
+  155 00000098         ;** 
+  156 00000098         ;**-----------------------------------------------------
+                       --------------------------------------------------
+  157 00000098         ;*******************************************************
+                       *************************************************/
+  158 00000098         __user_initial_stackheap
+  159 00000098 E59F0014        LDR              r0,=bottom_of_heap
+  160 0000009C         ;    LDR   r1,=StackUsr   
+  161 0000009C E1A0F00E        MOV              pc,lr
+  162 000000A0         
+  163 000000A0 0000011C 
+                       StackIrq
+                               DCD              IrqStackSpace + (IRQ_STACK_LEGT
+H - 1)* 4
+  164 000000A4 FFFFFFFC 
+
+
+
+ARM Macro Assembler    Page 5 
+
+
+                       StackFiq
+                               DCD              FiqStackSpace + (FIQ_STACK_LEGT
+H - 1)* 4
+  165 000000A8 FFFFFFFC 
+                       StackAbt
+                               DCD              AbtStackSpace + (ABT_STACK_LEGT
+H - 1)* 4
+  166 000000AC FFFFFFFC 
+                       StackUnd
+                               DCD              UndtStackSpace + (UND_STACK_LEG
+TH - 1)* 4
+  167 000000B0         
+  168 000000B0         ;/******************************************************
+                       ***************************************************
+  169 000000B0         ;** unction name  º¯ÊýÃû³Æ:  CrpData
+  170 000000B0         ;** Descriptions  ¹¦ÄÜÃèÊö:  encrypt the chip
+  171 000000B0         ;** input parameters  Êä¡¡Èë:    None ÎÞ
+  172 000000B0         ;** Returned value    Êä¡¡³ö :   None ÎÞ
+  173 000000B0         ;** Used global variables È«¾Ö±äÁ¿:  None ÎÞ
+  174 000000B0         ;** Calling modules  µ÷ÓÃÄ£¿é:  None ÎÞ
+  175 000000B0         ;** 
+  176 000000B0         ;**-----------------------------------------------------
+                       --------------------------------------------------
+  177 000000B0         ;*******************************************************
+                       *************************************************/
+  178 000000B0                 IF               :DEF: EN_CRP
+  188                          ENDIF
+  189 000000B0         
+  190 000000B0         ;/* ·ÖÅä¶ÑÕ»¿Õ¼ä */
+  191 000000B0 00000000 
+              00000000         AREA             MyStacks, DATA, NOINIT, ALIGN=2
+  192 00000000         
+  193 00000000         IrqStackSpace
+                               SPACE            IRQ_STACK_LEGTH * 4 ;Stack spac
+                                                            es for Interrupt Re
+                                                            Quest Mode ÖÐ¶ÏÄ£Ê½
+                                                            ¶ÑÕ»¿Õ¼ä
+  194 00000120         FiqStackSpace
+                               SPACE            FIQ_STACK_LEGTH * 4 ;Stack spac
+                                                            es for Fast Interru
+                                                            pt reQuest Mode ¿ìË
+                                                            ÙÖÐ¶ÏÄ£Ê½¶ÑÕ»¿Õ¼ä
+  195 00000120         AbtStackSpace
+                               SPACE            ABT_STACK_LEGTH * 4 ;Stack spac
+                                                            es for Suspend Mode
+                                                             ÖÐÖ¹ÒåÄ£Ê½¶ÑÕ»¿Õ¼ä
+                                                            
+  196 00000120         UndtStackSpace
+                               SPACE            UND_STACK_LEGTH * 4 ;Stack spac
+                                                            es for Undefined Mo
+                                                            de Î´¶¨ÒåÄ£Ê½¶ÑÕ»
+  197 00000120         
+  198 00000120         
+  199 00000120                 AREA             Heap, DATA, NOINIT
+  200 00000000         bottom_of_heap
+                               SPACE            1
+  201 00000001         
+  202 00000001                 AREA             Stacks, DATA, NOINIT
+  203 00000000         StackUsr
+
+
+
+ARM Macro Assembler    Page 6 
+
+
+  204 00000000         
+  205 00000000                 END
+Command Line: --debug --xref --apcs=interwork --depend=.\OutPut\Startup.d -o.\O
+utPut\Startup.o -IC:\Keil\ARM\INC -IC:\Keil\ARM\INC\Philips --list=Startup.lst 
+Startup.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+DataAbort 00000048
+
+Symbol: DataAbort
+   Definitions
+      At line 84 in file Startup.s
+   Uses
+      At line 70 in file Startup.s
+      At line 85 in file Startup.s
+
+DataAbortAddr 00000030
+
+Symbol: DataAbortAddr
+   Definitions
+      At line 70 in file Startup.s
+   Uses
+      At line 59 in file Startup.s
+Comment: DataAbortAddr used once
+FIQ_Addr 0000003C
+
+Symbol: FIQ_Addr
+   Definitions
+      At line 73 in file Startup.s
+   Uses
+      At line 62 in file Startup.s
+Comment: FIQ_Addr used once
+FIQ_Handler 0000004C
+
+Symbol: FIQ_Handler
+   Definitions
+      At line 88 in file Startup.s
+   Uses
+      At line 73 in file Startup.s
+Comment: FIQ_Handler used once
+IRQ_Addr 00000038
+
+Symbol: IRQ_Addr
+   Definitions
+      At line 72 in file Startup.s
+   Uses
+      None
+Comment: IRQ_Addr unused
+InitStack 0000005C
+
+Symbol: InitStack
+   Definitions
+      At line 104 in file Startup.s
+   Uses
+      At line 142 in file Startup.s
+Comment: InitStack used once
+Nouse 00000034
+
+Symbol: Nouse
+   Definitions
+      At line 71 in file Startup.s
+   Uses
+      None
+Comment: Nouse unused
+PrefetchAbort 00000044
+
+
+
+
+ARM Macro Assembler    Page 2 Alphabetic symbol ordering
+Relocatable symbols
+
+Symbol: PrefetchAbort
+   Definitions
+      At line 80 in file Startup.s
+   Uses
+      At line 69 in file Startup.s
+      At line 81 in file Startup.s
+
+PrefetchAddr 0000002C
+
+Symbol: PrefetchAddr
+   Definitions
+      At line 69 in file Startup.s
+   Uses
+      At line 58 in file Startup.s
+Comment: PrefetchAddr used once
+Reset 00000000
+
+Symbol: Reset
+   Definitions
+      At line 54 in file Startup.s
+   Uses
+      At line 42 in file Startup.s
+Comment: Reset used once
+ResetAddr 00000020
+
+Symbol: ResetAddr
+   Definitions
+      At line 66 in file Startup.s
+   Uses
+      At line 55 in file Startup.s
+Comment: ResetAddr used once
+ResetInit 0000008C
+
+Symbol: ResetInit
+   Definitions
+      At line 140 in file Startup.s
+   Uses
+      At line 66 in file Startup.s
+Comment: ResetInit used once
+SWI_Addr 00000028
+
+Symbol: SWI_Addr
+   Definitions
+      At line 68 in file Startup.s
+   Uses
+      At line 57 in file Startup.s
+Comment: SWI_Addr used once
+StackAbt 000000A8
+
+Symbol: StackAbt
+   Definitions
+      At line 165 in file Startup.s
+   Uses
+      At line 118 in file Startup.s
+Comment: StackAbt used once
+StackFiq 000000A4
+
+Symbol: StackFiq
+   Definitions
+
+
+
+ARM Macro Assembler    Page 3 Alphabetic symbol ordering
+Relocatable symbols
+
+      At line 164 in file Startup.s
+   Uses
+      At line 114 in file Startup.s
+Comment: StackFiq used once
+StackIrq 000000A0
+
+Symbol: StackIrq
+   Definitions
+      At line 163 in file Startup.s
+   Uses
+      At line 110 in file Startup.s
+Comment: StackIrq used once
+StackUnd 000000AC
+
+Symbol: StackUnd
+   Definitions
+      At line 166 in file Startup.s
+   Uses
+      At line 122 in file Startup.s
+Comment: StackUnd used once
+Undefined 00000040
+
+Symbol: Undefined
+   Definitions
+      At line 76 in file Startup.s
+   Uses
+      At line 67 in file Startup.s
+      At line 77 in file Startup.s
+
+UndefinedAddr 00000024
+
+Symbol: UndefinedAddr
+   Definitions
+      At line 67 in file Startup.s
+   Uses
+      At line 56 in file Startup.s
+Comment: UndefinedAddr used once
+__user_initial_stackheap 00000098
+
+Symbol: __user_initial_stackheap
+   Definitions
+      At line 158 in file Startup.s
+   Uses
+      At line 43 in file Startup.s
+Comment: __user_initial_stackheap used once
+vectors 00000000
+
+Symbol: vectors
+   Definitions
+      At line 49 in file Startup.s
+   Uses
+      None
+Comment: vectors unused
+21 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+AbtStackSpace 00000120
+
+Symbol: AbtStackSpace
+   Definitions
+      At line 195 in file Startup.s
+   Uses
+      At line 165 in file Startup.s
+Comment: AbtStackSpace used once
+FiqStackSpace 00000120
+
+Symbol: FiqStackSpace
+   Definitions
+      At line 194 in file Startup.s
+   Uses
+      At line 164 in file Startup.s
+Comment: FiqStackSpace used once
+IrqStackSpace 00000000
+
+Symbol: IrqStackSpace
+   Definitions
+      At line 193 in file Startup.s
+   Uses
+      At line 163 in file Startup.s
+Comment: IrqStackSpace used once
+MyStacks 00000000
+
+Symbol: MyStacks
+   Definitions
+      At line 191 in file Startup.s
+   Uses
+      None
+Comment: MyStacks unused
+UndtStackSpace 00000120
+
+Symbol: UndtStackSpace
+   Definitions
+      At line 196 in file Startup.s
+   Uses
+      At line 166 in file Startup.s
+Comment: UndtStackSpace used once
+5 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+Heap 00000000
+
+Symbol: Heap
+   Definitions
+      At line 199 in file Startup.s
+   Uses
+      None
+Comment: Heap unused
+bottom_of_heap 00000000
+
+Symbol: bottom_of_heap
+   Definitions
+      At line 200 in file Startup.s
+   Uses
+      At line 39 in file Startup.s
+      At line 159 in file Startup.s
+
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+StackUsr 00000000
+
+Symbol: StackUsr
+   Definitions
+      At line 203 in file Startup.s
+   Uses
+      At line 40 in file Startup.s
+      At line 126 in file Startup.s
+
+Stacks 00000000
+
+Symbol: Stacks
+   Definitions
+      At line 202 in file Startup.s
+   Uses
+      None
+Comment: Stacks unused
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Absolute symbols
+
+ABT_STACK_LEGTH 00000000
+
+Symbol: ABT_STACK_LEGTH
+   Definitions
+      At line 17 in file Startup.s
+   Uses
+      At line 165 in file Startup.s
+      At line 195 in file Startup.s
+
+FIQ32Mode 00000011
+
+Symbol: FIQ32Mode
+   Definitions
+      At line 26 in file Startup.s
+   Uses
+      None
+Comment: FIQ32Mode unused
+FIQ_STACK_LEGTH 00000000
+
+Symbol: FIQ_STACK_LEGTH
+   Definitions
+      At line 15 in file Startup.s
+   Uses
+      At line 164 in file Startup.s
+      At line 194 in file Startup.s
+
+IRQ32Mode 00000012
+
+Symbol: IRQ32Mode
+   Definitions
+      At line 25 in file Startup.s
+   Uses
+      None
+Comment: IRQ32Mode unused
+IRQ_STACK_LEGTH 00000048
+
+Symbol: IRQ_STACK_LEGTH
+   Definitions
+      At line 16 in file Startup.s
+   Uses
+      At line 163 in file Startup.s
+      At line 193 in file Startup.s
+
+NoInt 00000080
+
+Symbol: NoInt
+   Definitions
+      At line 20 in file Startup.s
+   Uses
+      None
+Comment: NoInt unused
+SVC32Mode 00000013
+
+Symbol: SVC32Mode
+   Definitions
+      At line 23 in file Startup.s
+   Uses
+      None
+Comment: SVC32Mode unused
+
+
+
+ARM Macro Assembler    Page 2 Alphabetic symbol ordering
+Absolute symbols
+
+SYS32Mode 0000001F
+
+Symbol: SYS32Mode
+   Definitions
+      At line 24 in file Startup.s
+   Uses
+      None
+Comment: SYS32Mode unused
+UND_STACK_LEGTH 00000000
+
+Symbol: UND_STACK_LEGTH
+   Definitions
+      At line 18 in file Startup.s
+   Uses
+      At line 166 in file Startup.s
+      At line 196 in file Startup.s
+
+USR32Mode 00000010
+
+Symbol: USR32Mode
+   Definitions
+      At line 22 in file Startup.s
+   Uses
+      None
+Comment: USR32Mode unused
+10 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+External symbols
+
+FIQ_Exception 00000000
+
+Symbol: FIQ_Exception
+   Definitions
+      At line 32 in file Startup.s
+   Uses
+      At line 90 in file Startup.s
+Comment: FIQ_Exception used once
+SoftwareInterrupt 00000000
+
+Symbol: SoftwareInterrupt
+   Definitions
+      At line 35 in file Startup.s
+   Uses
+      At line 68 in file Startup.s
+Comment: SoftwareInterrupt used once
+TargetResetInit 00000000
+
+Symbol: TargetResetInit
+   Definitions
+      At line 34 in file Startup.s
+   Uses
+      At line 143 in file Startup.s
+Comment: TargetResetInit used once
+__main 00000000
+
+Symbol: __main
+   Definitions
+      At line 33 in file Startup.s
+   Uses
+      At line 145 in file Startup.s
+Comment: __main used once
+__use_no_semihosting_swi 00000000
+
+Symbol: __use_no_semihosting_swi
+   Definitions
+      At line 28 in file Startup.s
+   Uses
+      None
+Comment: __use_no_semihosting_swi unused
+5 symbols
+373 symbols in table

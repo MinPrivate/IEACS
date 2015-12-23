@@ -1,0 +1,138 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+C:\Documents and Settings\Administrator\桌面\NMRQ_Final\NMRQ_IEACS\NMRQ_IEACS.uvproj
+Project File Date:  08/07/2013
+
+<h2>Output:</h2>
+Build target 'NMRQ_IEACS'
+assembling Startup.s...
+Startup.s(128): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+Startup.s:   128 00000088         MOV     PC, R0
+Startup.s(161): warning: A1608W: MOV pc,<rn> instruction used, but BX <rn> is preferred
+Startup.s:   161 0000009c     MOV   pc,lr    
+Startup.s: 0 Errors, 2 Warnings
+assembling Os_cpu_a.s...
+compiling Os_cpu_c.c...
+ARM\Os_cpu_c.c(93): warning:  #1267-D: Implicit physical register R0 should be defined as a variable
+ARM\Os_cpu_c.c:                   MRS     R0, SPSR
+ARM\Os_cpu_c.c:                           ^
+ARM\Os_cpu_c.c: ARM\Os_cpu_c.c: 1 warning, 0 errors
+compiling OS_CORE.C...
+compiling OS_TASK.C...
+compiling OS_TIME.C...
+compiling helper.c...
+compiling main.c...
+compiling NMRQ_key.c...
+compiling NMRQ_eac.c...
+Source\NMRQ_eac.c(389): warning:  #550-D: variable "tempMsg" was set but never used
+Source\NMRQ_eac.c:                       INT8U tempMsg;
+Source\NMRQ_eac.c:                             ^
+Source\NMRQ_eac.c: Source\NMRQ_eac.c: 1 warning, 0 errors
+compiling NMRQ_hi.c...
+compiling NMRQ_com.c...
+compiling NMRQ_task.c...
+Source\NMRQ_task.c(206): warning:  #550-D: variable "uiTempOpeState" was set but never used
+Source\NMRQ_task.c:     INT8U uiTempOpeState;                                                                   /*      记录操作执行情况        */
+Source\NMRQ_task.c:           ^
+Source\NMRQ_task.c: Source\NMRQ_task.c: 1 warning, 0 errors
+compiling Target.c...
+Target\Target.c(88): warning:  #69-D: integer conversion resulted in truncation
+Target\Target.c:       T0IR = 0xffffffff;
+Target\Target.c:              ^
+Target\Target.c(262): warning:  #69-D: integer conversion resulted in truncation
+Target\Target.c:       T0IR = 0xffffffff;
+Target\Target.c:              ^
+Target\Target.c: Target\Target.c: 2 warnings, 0 errors
+assembling IRQ.s...
+compiling NMRQ_lcd240160.c...
+linking...
+.\OutPut\debug_in_rom.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
+Program Size: Code=26932 RO-data=4800 RW-data=96 ZI-data=6600  
+.\OutPut\debug_in_rom.axf: Finished: 0 information, 1 warning and 0 error messages.
+FromELF: creating hex file...
+".\OutPut\debug_in_rom.axf" - 0 Error(s), 8 Warning(s).
+Load "C:\\Documents and Settings\\Administrator\\桌面\\NMRQ_Final\\NMRQ_IEACS\\OutPut\\debug_in_rom.AXF" 
+VTarget = 3.313V
+Info: TotalIRLen = 4, IRPrint = 0x01
+Info: TotalIRLen = 4, IRPrint = 0x01
+Info: RTCK reaction time is approx. 126ns
+Info: Auto JTAG speed: Adaptive
+Info: Core does not stop after Reset, setting WP to stop it.
+***JLink Warning: PC of target system has unexpected value of 0x00000468 after reset.
+DLL version V4.15n, compiled Jun 18 2010 19:55:09
+Firmware: J-Link ARM V8 compiled Aug 24 2011 17:23:32
+Hardware: V8.00
+Hardware-Breakpoints: 2
+Software-Breakpoints: 2048
+Watchpoints:          0
+Found 1 JTAG device, Total IRLen = 4:
+ Id of device #0: 0x4F1F0F0F
+ARM7 identified.
+Using adaptive clocking instead of fixed JTAG speed.
+Info: TotalIRLen = 4, IRPrint = 0x01
+Info: TotalIRLen = 4, IRPrint = 0x01
+Info: Resetting TRST
+Using adaptive clocking instead of fixed JTAG speed.
+Erase Done.
+Programming Done.
+Verify OK.
+Info: TotalIRLen = 4, IRPrint = 0x01
+Info: Resetting TRST
+Using adaptive clocking instead of fixed JTAG speed.
+Application running ...
+Build target 'NMRQ_IEACS'
+compiling NMRQ_task.c...
+Source\NMRQ_task.c(206): warning:  #550-D: variable "uiTempOpeState" was set but never used
+Source\NMRQ_task.c:     INT8U uiTempOpeState;                                                                   /*      记录操作执行情况        */
+Source\NMRQ_task.c:           ^
+Source\NMRQ_task.c: Source\NMRQ_task.c: 1 warning, 0 errors
+linking...
+.\OutPut\debug_in_rom.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
+Program Size: Code=26980 RO-data=4800 RW-data=96 ZI-data=6600  
+.\OutPut\debug_in_rom.axf: Finished: 0 information, 1 warning and 0 error messages.
+FromELF: creating hex file...
+".\OutPut\debug_in_rom.axf" - 0 Error(s), 2 Warning(s).
+Load "C:\\Documents and Settings\\Administrator\\桌面\\NMRQ_Final\\NMRQ_IEACS\\OutPut\\debug_in_rom.AXF" 
+VTarget = 3.313V
+Info: TotalIRLen = 4, IRPrint = 0x01
+Info: TotalIRLen = 4, IRPrint = 0x01
+Info: RTCK reaction time is approx. 126ns
+Info: Auto JTAG speed: Adaptive
+Info: Core does not stop after Reset, setting WP to stop it.
+***JLink Warning: PC of target system has unexpected value of 0x00000474 after reset.
+DLL version V4.15n, compiled Jun 18 2010 19:55:09
+Firmware: J-Link ARM V8 compiled Aug 24 2011 17:23:32
+Hardware: V8.00
+Hardware-Breakpoints: 2
+Software-Breakpoints: 2048
+Watchpoints:          0
+Found 1 JTAG device, Total IRLen = 4:
+ Id of device #0: 0x4F1F0F0F
+ARM7 identified.
+Using adaptive clocking instead of fixed JTAG speed.
+Info: TotalIRLen = 4, IRPrint = 0x01
+Info: TotalIRLen = 4, IRPrint = 0x01
+Info: Resetting TRST
+Using adaptive clocking instead of fixed JTAG speed.
+Erase Done.
+Programming Done.
+Verify OK.
+Info: TotalIRLen = 4, IRPrint = 0x01
+Info: Resetting TRST
+Using adaptive clocking instead of fixed JTAG speed.
+Application running ...
+Build target 'NMRQ_IEACS'
+compiling NMRQ_task.c...
+Source\NMRQ_task.c(206): warning:  #550-D: variable "uiTempOpeState" was set but never used
+Source\NMRQ_task.c:     INT8U uiTempOpeState;                                                                   /*      记录操作执行情况        */
+Source\NMRQ_task.c:           ^
+Source\NMRQ_task.c: Source\NMRQ_task.c: 1 warning, 0 errors
+linking...
+.\OutPut\debug_in_rom.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
+Program Size: Code=26980 RO-data=4800 RW-data=96 ZI-data=6600  
+.\OutPut\debug_in_rom.axf: Finished: 0 information, 1 warning and 0 error messages.
+FromELF: creating hex file...
+".\OutPut\debug_in_rom.axf" - 0 Error(s), 2 Warning(s).
